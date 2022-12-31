@@ -123,19 +123,21 @@
     left: 0;
     bottom: 0;
     width: 100%;
+    z-index: -1;
   }
 }
 
 @layer utilities {
+  .title {
+    font-size: clamp(5rem, 26vh, 16vw);
+    line-height: 1;
+  }
   .text-gradient {
-    background: -webkit-linear-gradient(
-      to right bottom,
-      theme("colors.primary"),
-      theme("colors.purple.500")
-    );
+    background: -webkit-linear-gradient(45deg, #f97316, #a855f7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   .glow-1 {
     background-color: theme("colors.purple.500");
     height: 160px;

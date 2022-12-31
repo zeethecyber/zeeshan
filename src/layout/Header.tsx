@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 function Header() {
+  const [rendered, setRendered] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [date, setDate] = useState(new Date());
 
@@ -8,6 +10,7 @@ function Header() {
     setDate(new Date());
   }
   useEffect(() => {
+    setRendered(true);
     const timerId = setInterval(refreshClock, 1000);
     return function cleanup() {
       clearInterval(timerId);
@@ -26,7 +29,7 @@ function Header() {
       >
         <div className="container m-auto py-6 px-4 flex justify-between items-center relative">
           <div>
-            <h6 className="text-primary font-semibold md:text-2xl">Zeeshan</h6>
+            <h6 className="text-white font-semibold md:text-2xl">ZEE</h6>
           </div>
           <div className="absolute left-1/2 top-1/2 translate-y-[-50%] translate-x-[-50%]">
             <div className="menu-icon" onClick={handleClick}>
@@ -39,7 +42,7 @@ function Header() {
           </div>
           <div className="flex gap-2 md:gap-6 items-center">
             <h6 className="text-white font-semibold">
-              {date.getHours()} : {date.getMinutes()}
+              {rendered && date.getHours()} : {rendered && date.getMinutes()}
             </h6>
             <span className="p-1 rounded-full bg-white inline-block">
               <svg
@@ -61,13 +64,13 @@ function Header() {
           <div className="flex flex-col justify-between h-full max-w-7xl m-auto px-4">
             <ul className="flex flex-col items-center gap-6 font-clash font-bold text-4xl md:text-5xl text-gray-1">
               <li>
-                <a href="#">Home</a>
+                <Link href={"/"}>Home</Link>
               </li>
               <li>
-                <a href="#">About</a>
+                <Link href={"/about"}>About</Link>
               </li>
               <li>
-                <a href="#">Works</a>
+                <Link href={"/works"}>Works</Link>
               </li>
             </ul>
             <div className="text-gray-1">
