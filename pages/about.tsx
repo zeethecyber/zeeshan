@@ -65,41 +65,42 @@ export default function About() {
           </div>
           <div className="col-span-2 text-lg md:text-2xl leading-loose">
             <p>
-              I am a software engineer working out of Lagos, Nigeria, and I am
+              I am a software engineer working out of Lagos, Nigeria, and I am
               constantly looking for ground-breaking solutions to issues that
-              arise in daily life. In my work, I spend most of my time coming up
+              arise in daily life. In my work, I spend most of my time coming up
               with innovative solutions to development problems.
             </p>
             <p className="mt-4">
-              I've been a part of this industry for over two years and within
-              those years, I've honed my analytic and collaboration skills which
-              makes working with a team easier. I've also had the opportunity to
-              serve as lead software engineer for different projects.
+              I have been a part of this industry for over two years and within
+              those years, I have honed my analytic and collaboration skills
+              which makes working with a team easier. I have also had the
+              opportunity to serve as lead software engineer for different
+              projects.
             </p>
             <p className="mt-4">
-              Even though I stumbled upon code by accident, it's something I've
-              come to really like. But like they say, good things come to us
-              without plan, no? I especially enjoy watching code bring to life
-              an entirely new beautiful thing, it's magical.
+              Even though I stumbled upon code by accident, it is something I
+              have come to really like. But like they say, good things come to
+              us without plan, no? I especially enjoy watching code bring to
+              life an entirely new beautiful thing, it is magical.
             </p>
             <p className="mt-4">
-              For me, each project I have the privilege to work on is a new
+              For me, each project I have the privilege to work on is a new
               opportunity to learn new things, meet people with ideas that
-              differ from mine and discover things about myself I never knew
+              differ from mine and discover things about myself I never knew
               were beneath the layers of all of me.
             </p>
             <p className="mt-4">
-              I enjoy watching anime and I am very into the Marvel franchise.
-              I listen to lots of music and James Blake and Jon Bellion are
-              probably my two favourite artists (for now). Let's not forget the
-              guys at Snarky Puppy, they're amazing. I spend most of my free
+              I enjoy watching anime and I am very into the Marvel franchise. I
+              listen to lots of music and James Blake and Jon Bellion are
+              probably my two favourite artists (for now). Lets not forget the
+              guys at Snarky Puppy, they are amazing. I spend most of my free
               time with my family and my cat.
             </p>
             <p className="mt-4">
-              I'm surprised you actually read all of that, well thanks for your
-              patience😅 I'm available for full-time roles and freelance
-              projects worldwide. As long as you don't mind watching me work
-              from screens away. Want to Start a Project? Let’s
+              I am surprised you actually read all of that, well thanks for your
+              patience😅 I am available for full-time roles and freelance
+              projects worldwide. As long as you don not mind watching me work
+              from screens away. Want to Start a Project? Let&s
             </p>
             Talk Design by: adebisi
           </div>
