@@ -3,8 +3,10 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="text-gray-1 py-20 max-w-7xl m-auto px-6">
-      <h6 className="text-xl md:text-2xl my-4">Want to start a project?</h6>
-      <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold">
+      <h6 className="text-xl md:text-2xl my-4 tracking-[0.3rem]">
+        Want to start a project?
+      </h6>
+      <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-[0.4rem]">
         Let&#39;s Talk!
       </h1>
       <div className="flex justify-between items-center mt-12">
@@ -14,7 +16,7 @@ export default function Footer() {
               "mailto:zeeshanasif008@outlook.com?subject=Lets%20work%20together!"
             }
           >
-            <span className="text-lg lg:text-2xl font-clash">
+            <span className="text-lg lg:text-2xl font-clash tracking-[0.3rem]">
               Contact by mail
             </span>
           </Link>

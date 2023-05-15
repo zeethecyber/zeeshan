@@ -16,10 +16,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="items-center justify-center flex hero-section h-screen">
         <div>
-          <p className="font-clash text-primary tracking-widest text-lg md:text-xl">
-            Zeeshan Asif
-          </p>
-          <h1 className="text-white font-bold title text-center">
+          <h1 className="text-[#d7b486] font-bold title text-center">
             Frontend <br /> <span className="text-gradient">Hashira</span>
           </h1>
           <div className="text-gray-1 text-xs md:text-sm text-right flex justify-between mt-4">
@@ -57,18 +54,22 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="max-w-xs md:max-w-xl m-auto px-4 my-32">
-        <h2 className="text-3xl font-bold text-gray-1 my-8">About Me</h2>
-        <p className=" text-gray-1 mx-auto text-xl !leading-loose text-xl md:text-2xl">
-          Hi, Zeeshan here. Obviously! <br /> I am a front-end developer who
-          constantly seeks out innovative solutions to everyday problems. For
-          whatever reason it is you are here, welcome.
-        </p>
+      <section className="max-w-7xl m-auto px-12 my-32">
+        <div className="max-w-3xl">
+          <h2 className="text-4xl text-[#d7b486] font-bold text-gray-1 my-8 tracking-[0.4rem]">
+            About Me
+          </h2>
+          <p className=" text-gray-1 mx-auto text-xl !leading-loose text-xl">
+            Hi, Zeeshan here. Obviously! <br /> I am a front-end developer who
+            constantly seeks out innovative solutions to everyday problems. For
+            whatever reason it is you are here, welcome.
+          </p>
+        </div>
       </section>
 
       {/* Works Section */}
       <section className="max-w-7xl m-auto px-8 mt-16">
-        <h2 className="text-5xl md:text-8xl text-center font-bold text-gray-1">
+        <h2 className="text-5xl md:text-8xl text-center font-bold text-gray-1 tracking-[0.4rem]">
           Featured <br /> Works
         </h2>
         <div className="grid mt-12">

@@ -23,15 +23,14 @@ function Header() {
 
   return (
     <>
-      <header
-        className={`w-full z-20 top-0 left-0 fixed backdrop-blur-sm
-        } border-b border-white/[0.1] z-50 ${showNav ? "" : "bg-black/[0.1]"}`}
-      >
-        <div className="container m-auto py-6 px-4 flex justify-between items-center relative">
+      <header className={`w-full z-20 top-0 left-0 fixed z-50`}>
+        <div className="max-w-7xl m-auto py-6 px-12 flex justify-between items-center relative">
           <div>
-            <h6 className="text-white font-semibold md:text-2xl">ZEE</h6>
+            <h6 className="text-white text-xs md:text-base font-medium tracking-[0.6rem]">
+              ZEESHAN ASIF
+            </h6>
           </div>
-          <div className="absolute left-1/2 top-1/2 translate-y-[-50%] translate-x-[-50%]">
+          <div className="md:absolute left-1/2 top-1/2 md:translate-y-[-50%] md:translate-x-[-50%]">
             <div className="menu-icon" onClick={handleClick}>
               <input className="menu-icon__cheeckbox" type="checkbox" />
               <div>
@@ -40,7 +39,7 @@ function Header() {
               </div>
             </div>
           </div>
-          <div className="flex gap-2 md:gap-6 items-center">
+          <div className="gap-2 hidden md:flex md:gap-6 items-center">
             <h6 className="text-white font-semibold">
               {rendered && date.getHours()} : {rendered && date.getMinutes()}
             </h6>

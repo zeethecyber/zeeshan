@@ -112,12 +112,12 @@
   }
 
   body {
-    background-image: url("./../src/img/grain.svg");
+    /* background-image: url("./../src/img/grain.svg"); */
     font-family: "Archivo", sans-serif;
   }
   body::before {
     content: "";
-    background-image: url("./../src/img/background-stripes.svg");
+    /* background-image: url("./../src/img/background-stripes.svg"); */
     position: fixed;
     top: 0;
     left: 0;
