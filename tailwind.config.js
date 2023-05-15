@@ -9,10 +9,11 @@ module.exports = {
     fontFamily: {
       clash: ["Clash Display", "sans-serif"],
       archivo: ["Archivo", "sans-serif"],
+      poppins: ["Poppins", "sans-serif"],
     },
     extend: {
       colors: {
-        primary: "#ff873c",
+        primary: "#FBAB7E",
         "gray-1": "#fcf3ea",
       },
     },

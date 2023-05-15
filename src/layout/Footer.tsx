@@ -6,7 +6,7 @@ export default function Footer() {
       <h6 className="text-xl md:text-2xl my-4 tracking-[0.3rem]">
         Want to start a project?
       </h6>
-      <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-[0.4rem]">
+      <h1 className="text-6xl md:text-8xl lg:text-9xl text-primary font-semibold tracking-[0.4rem]">
         Let&#39;s Talk!
       </h1>
       <div className="flex justify-between items-center mt-12">

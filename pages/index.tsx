@@ -1,8 +1,39 @@
 import Head from "next/head";
 import Header from "../src/layout/Header";
 import Footer from "../src/layout/Footer";
+import { useEffect, useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 export default function Home() {
+  const comp = useRef();
+  const cursor = useRef();
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      // let cursor = document.querySelector(".cursor");
+      let mouseX = 0;
+      let mouseY = 0;
+
+      gsap.to({}, 0.016, {
+        repeat: -1,
+        onRepeat: function () {
+          gsap.set(cursor.current, {
+            css: {
+              left: mouseX,
+              top: mouseY,
+            },
+          });
+        },
+      });
+
+      window.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+    }, comp);
+
+    return () => ctx.revert();
+  }, []);
   return (
     <>
       <Head>
@@ -10,14 +41,14 @@ export default function Home() {
         <title>Zeeshan Asif</title>
       </Head>
       <Header></Header>
-
+      <div className="cursor" ref={cursor}></div>
       <div className="glow-1 fixed top-0 right-0"></div>
       <div className="glow-2 fixed top-0 right-[100px]"></div>
       {/* Hero Section */}
       <section className="items-center justify-center flex hero-section h-screen">
         <div>
-          <h1 className="text-[#d7b486] font-bold title text-center">
-            Frontend <br /> <span className="text-gradient">Hashira</span>
+          <h1 className="text-primary font-medium title text-center">
+            Frontend <br /> <span className="text-white">Hashira</span>
           </h1>
           <div className="text-gray-1 text-xs md:text-sm text-right flex justify-between mt-4">
             <span className="text-left inline-flex overflow-y-hidden h-min">
@@ -56,7 +87,7 @@ export default function Home() {
       {/* About Section */}
       <section className="max-w-7xl m-auto px-12 my-32">
         <div className="max-w-3xl">
-          <h2 className="text-4xl text-[#d7b486] font-bold text-gray-1 my-8 tracking-[0.4rem]">
+          <h2 className="text-4xl text-primary font-semibold text-gray-1 my-8 tracking-[0.4rem]">
             About Me
           </h2>
           <p className=" text-gray-1 mx-auto text-xl !leading-loose text-xl">
@@ -69,7 +100,7 @@ export default function Home() {
 
       {/* Works Section */}
       <section className="max-w-7xl m-auto px-8 mt-16">
-        <h2 className="text-5xl md:text-8xl text-center font-bold text-gray-1 tracking-[0.4rem]">
+        <h2 className="text-5xl md:text-8xl text-center font-semibold text-primary tracking-[0.4rem]">
           Featured <br /> Works
         </h2>
         <div className="grid mt-12">
@@ -117,7 +148,6 @@ export default function Home() {
           View More
         </h6>
       </section>
-
       {/* Footer */}
       <Footer></Footer>
     </>

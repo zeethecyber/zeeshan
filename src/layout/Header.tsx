@@ -61,15 +61,21 @@ function Header() {
       {showNav && (
         <div className="h-screen w-full bg-black/75 backdrop-blur-lg pb-20 pt-32 top-0 left-0 fixed z-10">
           <div className="flex flex-col justify-between h-full max-w-7xl m-auto px-4">
-            <ul className="flex flex-col items-center gap-6 font-clash font-bold text-4xl md:text-5xl text-gray-1">
+            <ul className="flex flex-col items-center gap-6 font-semibold text-4xl md:text-5xl text-gray-1">
               <li>
-                <Link href={"/"}>Home</Link>
+                <Link className="!font-clash" href={"/"}>
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href={"/about"}>About</Link>
+                <Link className="!font-clash" href={"/about"}>
+                  About
+                </Link>
               </li>
               <li>
-                <Link href={"/works"}>Works</Link>
+                <Link className="!font-clash" href={"/works"}>
+                  Works
+                </Link>
               </li>
             </ul>
             <div className="text-gray-1">
