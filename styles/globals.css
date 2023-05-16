@@ -116,7 +116,7 @@
   body,
   * {
     /* background-image: url("./../src/img/grain.svg"); */
-    font-family: "Archivo", sans-serif;
+    font-family: "Poppins", sans-serif;
     cursor: none;
   }
   body::before {
@@ -151,7 +151,7 @@
   }
 
   .title {
-    font-size: clamp(4rem, 25vh, 16vw);
+    font-size: clamp(4rem, 23vh, 16vw);
     line-height: 1;
   }
   .text-gradient {

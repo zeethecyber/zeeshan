@@ -1,29 +1,14 @@
-import Head from "next/head";
-
-import Header from "../src/layout/Header";
-import Footer from "../src/layout/Footer";
+import AppLayout from "../src/layout/AppLayout";
 
 export default function About() {
   return (
-    <>
-      <Head>
-        <meta name="theme-color" content="#000" />
-        <title>About</title>
-      </Head>
-
-      {/* Header */}
-      <Header></Header>
-
-      {/* Glow */}
-      <div className="glow-1 fixed top-0 right-0"></div>
-      <div className="glow-2 fixed top-0 right-[100px]"></div>
-
+    <AppLayout>
       {/* Hero */}
       <section className="h-screen container m-auto">
         <div className="flex justify-center items-center h-full">
           <div className="text-center">
-            <h1 className="title text-gray-1 font-bold">
-              Zeeshan <br /> <span className="text-gradient">Asif</span>
+            <h1 className="title text-primary font-medium">
+              Zeeshan <br /> <span className="text-white font-clash">Asif</span>
             </h1>
             <h6 className="text-white font-semibold text-xl mt-8 underline">
               Download Resume
@@ -40,8 +25,8 @@ export default function About() {
             <div>
               <h6 className="text-lg md:text-xl mb-4">Frontend Tools</h6>
               <p className="leading-loose">
-                JavaScript(ES6+), TypeScript, HTML5, React.js, Next.js, Redux,
-                Redux Toolkit, Redux Thunk, Redux Saga, NPM,
+                JavaScript(ES6+), TypeScript, HTML5, React.js, Next.js,React
+                Native, Redux, Redux Toolkit, Redux Thunk, NPM,
                 Git/Gitlab/Github/Bitbucket.
               </p>
             </div>
@@ -55,7 +40,7 @@ export default function About() {
             <div className="mt-12">
               <h6 className="text-lg md:text-xl mb-4">Interests</h6>
               <p className="leading-loose">
-                Creative Development, E-Commerce, Augmented Reality, Web3.
+                Creative Development, Artificial Intelligence, Web3.
               </p>
             </div>
           </div>
@@ -86,8 +71,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      <Footer></Footer>
-    </>
+    </AppLayout>
   );
 }
