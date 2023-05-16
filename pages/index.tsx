@@ -1,16 +1,16 @@
 import Head from "next/head";
 import Header from "../src/layout/Header";
 import Footer from "../src/layout/Footer";
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
 
 export default function Home() {
   const comp = useRef();
-  const cursor = useRef();
+  const cursor = useRef(null);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      // let cursor = document.querySelector(".cursor");
       let mouseX = 0;
       let mouseY = 0;
 
@@ -103,29 +103,31 @@ export default function Home() {
         <h2 className="text-5xl md:text-8xl text-center font-semibold text-primary tracking-[0.4rem]">
           Featured <br /> Works
         </h2>
-        <div className="grid mt-12">
+        <div className="grid mt-12 gap-y-16">
           <div className="md:grid grid-cols-5">
             <div className="col-span-2"></div>
             <div
-              className="py-8 featured-img relative col-span-3"
+              className="py-8 featured-img relative col-span-3 aspect-[4/3]"
               data-before-content="1 OF 3"
             >
-              <img
+              <Image
                 src="https://cdn.dribbble.com/userupload/4170047/file/original-d987c61195a49b715931aedbcf6939bb.png?compress=1&resize=1024x768"
                 alt=""
-                className="aspect-[4/3] bg-red-300 object-cover grayscale"
+                className="bg-red-300 object-cover grayscale"
+                fill={true}
               />
             </div>
           </div>
           <div className="md:grid grid-cols-5">
             <div
-              className="py-8 featured-img relative col-span-3"
+              className="py-8 featured-img relative col-span-3 aspect-[4/3]"
               data-before-content="2 OF 3"
             >
-              <img
+              <Image
                 src="https://cdn.dribbble.com/userupload/4171388/file/original-27a9636b63947f0ebcb8e3473194d046.png?compress=1&resize=1024x768"
                 alt=""
-                className="aspect-[4/3] bg-red-300 object-cover grayscale"
+                className="bg-red-300 object-cover grayscale"
+                fill={true}
               />
             </div>
             <div className="col-span-2"></div>
@@ -133,13 +135,14 @@ export default function Home() {
           <div className="md:grid grid-cols-5">
             <div className="col-span-2"></div>
             <div
-              className="py-8 featured-img relative col-span-3"
+              className="py-8 featured-img relative col-span-3 aspect-[4/3]"
               data-before-content="3 OF 3"
             >
-              <img
+              <Image
                 src="https://cdn.dribbble.com/userupload/4170047/file/original-d987c61195a49b715931aedbcf6939bb.png?compress=1&resize=1024x768"
                 alt=""
-                className="aspect-[4/3] bg-red-300 object-cover grayscale"
+                className="bg-red-300 object-cover grayscale"
+                fill={true}
               />
             </div>
           </div>
