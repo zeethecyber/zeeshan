@@ -1,11 +1,11 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { gsap } from "gsap";
-
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 function Header() {
   const [rendered, setRendered] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [date, setDate] = useState(new Date());
+  const { scrollYProgress } = useScroll();
   function refreshClock() {
     setDate(new Date());
   }
@@ -24,6 +24,10 @@ function Header() {
   return (
     <>
       <header className={`w-full z-20 top-0 left-0 fixed z-50`}>
+        <motion.div
+          style={{ scaleX: scrollYProgress }}
+          className="h-1 w-full bg-primary fixed left-0 top-0"
+        ></motion.div>
         <div className="max-w-7xl m-auto py-6 px-12 flex justify-between items-center relative">
           <div>
             <h6 className="text-white text-xs md:text-base font-medium tracking-[0.6rem]">
@@ -58,7 +62,7 @@ function Header() {
       </header>
 
       {/* Top Navigation */}
-      {showNav && <NavigationComponent />}
+      <AnimatePresence>{showNav && <NavigationComponent />}</AnimatePresence>
     </>
   );
 }
@@ -66,27 +70,12 @@ function Header() {
 export default Header;
 
 function NavigationComponent() {
-  const comp = useRef();
-  const headerComponent = useRef(null);
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.from(headerComponent.current, {
-        opacity: 0,
-        y: -50,
-        duration: 0.2,
-      });
-    }, comp);
-
-    return () => ctx.revert();
-  }, [headerComponent]);
-
-  // useEffect(()=>{
-  //   let path = window.location;
-  // },[window.location]);
-
   return (
-    <div
-      ref={headerComponent}
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -50 }}
+      transition={{ duration: 0.2 }}
       className="h-screen w-full bg-black/75 backdrop-blur-lg pb-28 pt-32 top-0 left-0 fixed z-10"
     >
       <div className="flex flex-col justify-between h-full max-w-7xl m-auto px-4">
@@ -175,6 +164,6 @@ function NavigationComponent() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

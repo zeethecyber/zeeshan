@@ -1,6 +1,8 @@
 import Link from "next/link";
-
+import { motion, useScroll } from "framer-motion";
 export default function Footer() {
+  const { scrollYProgress } = useScroll();
+
   return (
     <footer className="text-gray-1 py-20 max-w-7xl m-auto px-6">
       <h6 className="text-xl md:text-2xl my-4 tracking-[0.3rem]">

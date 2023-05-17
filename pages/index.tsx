@@ -1,6 +1,7 @@
 import Image from "next/image";
 import AppLayout from "../src/layout/AppLayout";
-
+import { motion } from "framer-motion";
+import FeaturedImage from "../src/components/FeaturedImage";
 export default function Home() {
   return (
     <AppLayout>
@@ -48,62 +49,62 @@ export default function Home() {
       {/* About Section */}
       <section className="max-w-7xl m-auto px-12 my-32">
         <div className="max-w-3xl">
-          <h2 className="text-4xl text-primary font-medium text-gray-1 my-8 tracking-[0.4rem]">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ amount: "all" }}
+            className="text-4xl text-primary font-medium text-gray-1 my-8 tracking-[0.4rem]"
+          >
             About Me
-          </h2>
-          <p className=" text-gray-1 mx-auto text-xl !leading-loose text-xl">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ amount: "all" }}
+            className=" text-gray-1 mx-auto text-xl !leading-loose text-xl"
+          >
             Hi, Zeeshan here. Obviously! <br /> I am a front-end developer who
             constantly seeks out innovative solutions to everyday problems. For
             whatever reason it is you are here, welcome.
-          </p>
+          </motion.p>
         </div>
       </section>
 
       {/* Works Section */}
       <section className="max-w-7xl m-auto px-8 mt-16">
-        <h2 className="text-5xl md:text-8xl text-center font-medium text-primary tracking-[0.4rem]">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ amount: "all" }}
+          className="text-5xl md:text-8xl text-center font-medium text-primary tracking-[0.4rem]"
+        >
           Featured <br /> <span className="text-white font-clash">Works</span>
-        </h2>
+        </motion.h2>
         <div className="grid mt-12 gap-y-16">
           <div className="md:grid grid-cols-5">
             <div className="col-span-2"></div>
-            <div
-              className="py-8 featured-img relative col-span-3 aspect-[4/3]"
-              data-before-content="1 OF 3"
-            >
-              <Image
+            <div className="col-span-3 aspect-[4/3]">
+              <FeaturedImage
                 src="https://cdn.dribbble.com/userupload/4170047/file/original-d987c61195a49b715931aedbcf6939bb.png?compress=1&resize=1024x768"
-                alt=""
-                className="object-cover hover:grayscale hover:scale-[0.96] duration-150 ease-in hover:rounded-xl"
-                fill={true}
+                before="1 of 3"
               />
             </div>
           </div>
           <div className="md:grid grid-cols-5">
-            <div
-              className="py-8 featured-img relative col-span-3 aspect-[4/3]"
-              data-before-content="2 OF 3"
-            >
-              <Image
+            <div className="col-span-3 aspect-[4/3]">
+              <FeaturedImage
                 src="https://cdn.dribbble.com/userupload/4171388/file/original-27a9636b63947f0ebcb8e3473194d046.png?compress=1&resize=1024x768"
-                alt=""
-                className="object-cover hover:grayscale hover:scale-[0.96] duration-150 ease-in hover:rounded-xl"
-                fill={true}
+                before="2 of 3"
               />
             </div>
             <div className="col-span-2"></div>
           </div>
           <div className="md:grid grid-cols-5">
             <div className="col-span-2"></div>
-            <div
-              className="py-8 featured-img relative col-span-3 aspect-[4/3]"
-              data-before-content="3 OF 3"
-            >
-              <Image
+            <div className="col-span-3 aspect-[4/3]">
+              <FeaturedImage
                 src="https://cdn.dribbble.com/userupload/4170047/file/original-d987c61195a49b715931aedbcf6939bb.png?compress=1&resize=1024x768"
-                alt=""
-                className="object-cover hover:grayscale hover:scale-[0.96] duration-150 ease-in hover:rounded-xl"
-                fill={true}
+                before="3 of 3"
               />
             </div>
           </div>

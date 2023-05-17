@@ -1,11 +1,5 @@
 import Head from "next/head";
-import React, {
-  ReactElement,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { ReactElement, useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { gsap } from "gsap";
