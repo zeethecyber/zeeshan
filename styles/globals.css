@@ -116,7 +116,7 @@
   body,
   * {
     /* background-image: url("./../src/img/grain.svg"); */
-    font-family: "Poppins", sans-serif;
+    font-family: "Archivo", sans-serif;
     cursor: none;
   }
   body::before {

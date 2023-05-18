@@ -1,6 +1,14 @@
+import useDownloader from "react-use-downloader";
 import AppLayout from "../src/layout/AppLayout";
 
 export default function About() {
+  const { size, elapsed, percentage, download, cancel, error, isInProgress } =
+    useDownloader();
+
+  const fileUrl = `/assets/zeeshan_resume.pdf`;
+  const filename = "Zeeshan_Resume.pdf";
+
+  console.log(isInProgress ? "Downloading" : "Not Downloading");
   return (
     <AppLayout>
       {/* Hero */}
@@ -10,9 +18,17 @@ export default function About() {
             <h1 className="title text-primary font-medium">
               Zeeshan <br /> <span className="text-white font-clash">Asif</span>
             </h1>
-            <h6 className="text-white font-semibold text-xl mt-8 underline">
-              Download Resume
-            </h6>
+            <span className="flex gap-4 items-center mt-8 justify-center">
+              <button
+                onClick={() => download(fileUrl, filename)}
+                className="font-clash text-white font-semibold text-xl underline active:opacity-95 active:scale-[0.95] cursor-none duration-150"
+              >
+                Download Resume
+              </button>
+              {isInProgress && (
+                <span className="bg-white h-4 w-4 block animate-spin"></span>
+              )}
+            </span>
           </div>
         </div>
       </section>
