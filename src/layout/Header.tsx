@@ -1,19 +1,39 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion, useScroll } from "framer-motion";
+import { AnimatePresence, motion, useScroll, motionValue } from "framer-motion";
+import { useRouter } from "next/router";
 function Header() {
   const [rendered, setRendered] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [date, setDate] = useState(new Date());
   const { scrollYProgress } = useScroll();
+  const menuRef: any = useRef(null);
+  const router = useRouter();
+
   function refreshClock() {
     setDate(new Date());
   }
   useEffect(() => {
     setRendered(true);
     const timerId = setInterval(refreshClock, 1000);
+    console.log("========MENU REF=========", menuRef.current);
     return function cleanup() {
       clearInterval(timerId);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      if (menuRef.current) {
+        menuRef.current.checked = false;
+        setShowNav(false);
+      }
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, []);
 
@@ -36,7 +56,11 @@ function Header() {
           </div>
           <div className="md:absolute left-1/2 top-1/2 md:translate-y-[-50%] md:translate-x-[-50%]">
             <div className="menu-icon" onClick={handleClick}>
-              <input className="menu-icon__cheeckbox" type="checkbox" />
+              <input
+                className="menu-icon__cheeckbox"
+                type="checkbox"
+                ref={menuRef}
+              />
               <div>
                 <span></span>
                 <span></span>

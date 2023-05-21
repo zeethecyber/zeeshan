@@ -3,7 +3,7 @@ import React, { ReactElement, useEffect, useRef, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { gsap } from "gsap";
-function AppLayout({ children }: { children: ReactElement[] }) {
+function AppLayout({ children }: { children: ReactElement[] | ReactElement }) {
   const [showCursor, setShowCursor] = useState(false);
   const comp = useRef();
   const cursor = useRef(null);
