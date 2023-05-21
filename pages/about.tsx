@@ -1,5 +1,4 @@
 import useDownloader from "react-use-downloader";
-import AppLayout from "../src/layout/AppLayout";
 
 export default function About() {
   const { size, elapsed, percentage, download, cancel, error, isInProgress } =
@@ -10,7 +9,7 @@ export default function About() {
 
   console.log(isInProgress ? "Downloading" : "Not Downloading");
   return (
-    <AppLayout>
+    <>
       {/* Hero */}
       <section className="h-screen container m-auto">
         <div className="flex justify-center items-center h-full">
@@ -87,6 +86,6 @@ export default function About() {
           </div>
         </div>
       </section>
-    </AppLayout>
+    </>
   );
 }
