@@ -83,6 +83,7 @@ export default function Home() {
             <div className="col-span-2"></div>
             <div className="col-span-2 aspect-[4/3]">
               <FeaturedImage
+                title="DC Manager App"
                 src="https://cdn.dribbble.com/userupload/4170047/file/original-d987c61195a49b715931aedbcf6939bb.png?compress=1&resize=1024x768"
                 before="1 of 3"
               />
@@ -91,6 +92,7 @@ export default function Home() {
           <div className="md:grid grid-cols-4">
             <div className="col-span-2 aspect-[4/3]">
               <FeaturedImage
+                title="DC Customer App"
                 src="https://cdn.dribbble.com/userupload/4171388/file/original-27a9636b63947f0ebcb8e3473194d046.png?compress=1&resize=1024x768"
                 before="2 of 3"
               />
@@ -101,6 +103,8 @@ export default function Home() {
             <div className="col-span-2"></div>
             <div className="col-span-2 aspect-[4/3]">
               <FeaturedImage
+                title="PING - FYP"
+                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, non."
                 src="https://cdn.dribbble.com/userupload/4170047/file/original-d987c61195a49b715931aedbcf6939bb.png?compress=1&resize=1024x768"
                 before="3 of 3"
               />
