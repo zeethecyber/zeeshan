@@ -7,13 +7,14 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      clash: ["Clash Display", "sans-serif"],
-      archivo: ["Archivo", "sans-serif"],
-      poppins: ["Poppins", "sans-serif"],
+      // clash: ["Clash Display", "sans-serif"],
+      // archivo: ["Archivo", "sans-serif"],
+      // poppins: ["Poppins", "sans-serif"],
+      fira: ["Fira Code", "sans-serif"],
     },
     extend: {
       colors: {
-        primary: "#FBAB7E",
+        primary: "#C778DD",
         "gray-1": "#fcf3ea",
       },
     },

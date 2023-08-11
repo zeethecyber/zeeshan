@@ -2,341 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Importing Poppins font */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @layer base {
-  /* Clash Display Font */
+  
+  /* Fira Code Font */
   @font-face {
-    font-family: "Clash Display";
-    src: url(./../src/fonts/ClashDisplay/Fonts/OTF/ClashDisplay-Extralight.otf);
-    font-weight: 200;
-  }
-  @font-face {
-    font-family: "Clash Display";
-    src: url(./../src/fonts/ClashDisplay/Fonts/OTF/ClashDisplay-Light.otf);
-    font-weight: 300;
-  }
-  @font-face {
-    font-family: "Clash Display";
-    src: url(./../src/fonts/ClashDisplay/Fonts/OTF/ClashDisplay-Regular.otf);
-    font-weight: 400;
-  }
-  @font-face {
-    font-family: "Clash Display";
-    src: url(./../src/fonts/ClashDisplay/Fonts/OTF/ClashDisplay-Medium.otf);
-    font-weight: 500;
-  }
-  @font-face {
-    font-family: "Clash Display";
-    src: url(./../src/fonts/ClashDisplay/Fonts/OTF/ClashDisplay-Semibold.otf);
-    font-weight: 600;
-  }
-  @font-face {
-    font-family: "Clash Display";
-    src: url(./../src/fonts/ClashDisplay/Fonts/OTF/ClashDisplay-Bold.otf);
-    font-weight: 700;
-  }
-
-  /* Archivo Font */
-  @font-face {
-    font-family: "Archivo";
-    src: url(./../src/fonts/Archivo/Fonts/OTF/Archivo-ExtraLight.otf);
-    font-weight: 200;
-  }
-  @font-face {
-    font-family: "Archivo";
-    src: url(./../src/fonts/Archivo/Fonts/OTF/Archivo-ExtraLightItalic.otf);
-    font-weight: 200;
-    font-style: italic;
-  }
-  @font-face {
-    font-family: "Archivo";
-    src: url(./../src/fonts/Archivo/Fonts/OTF/Archivo-Light.otf);
-    font-weight: 300;
-  }
-  @font-face {
-    font-family: "Archivo";
-    src: url(./../src/fonts/Archivo/Fonts/OTF/Archivo-LightItalic.otf);
-    font-weight: 200;
-    font-style: italic;
-  }
-  @font-face {
-    font-family: "Archivo";
-    src: url(./../src/fonts/Archivo/Fonts/OTF/Archivo-Regular.otf);
-    font-weight: 200;
-  }
-  @font-face {
-    font-family: "Archivo";
-    src: url(./../src/fonts/Archivo/Fonts/OTF/Archivo-Medium.otf);
-    font-weight: 200;
-  }
-  @font-face {
-    font-family: "Archivo";
-    src: url(./../src/fonts/Archivo/Fonts/OTF/Archivo-MediumItalic.otf);
-    font-weight: 200;
-    font-style: italic;
-  }
-  @font-face {
-    font-family: "Archivo";
-    src: url(./../src/fonts/Archivo/Fonts/OTF/Archivo-SemiBold.otf);
-    font-weight: 200;
-  }
-  @font-face {
-    font-family: "Archivo";
-    src: url(./../src/fonts/Archivo/Fonts/OTF/Archivo-SemiBoldItalic.otf);
-    font-weight: 200;
-    font-style: italic;
-  }
-  @font-face {
-    font-family: "Archivo";
-    src: url(./../src/fonts/Archivo/Fonts/OTF/Archivo-Bold.otf);
-    font-weight: 200;
-  }
-  @font-face {
-    font-family: "Archivo";
-    src: url(./../src/fonts/Archivo/Fonts/OTF/Archivo-BoldItalic.otf);
-    font-weight: 200;
-    font-style: italic;
-  }
-  @font-face {
-    font-family: "Archivo";
-    src: url(./../src/fonts/Archivo/Fonts/OTF/Archivo-ExtraBold.otf);
-    font-weight: 200;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Clash Display", sans-serif;
+    font-family: "Fira Code";
+    src: url(./../src/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf);
   }
 
   body,
   * {
     /* background-image: url("./../src/img/grain.svg"); */
-    font-family: "Archivo", sans-serif;
-    cursor: none;
+    font-family: "Fira Code", sans-serif;
+    /* cursor: none; */
   }
-  body::before {
-    content: "";
-    /* background-image: url("./../src/img/background-stripes.svg"); */
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: -1;
+  body{
+    background: var(--background, linear-gradient(180deg, #020108 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%));
+    /* background-color: #282C33; */
+    background-repeat: no-repeat;
+    min-height: 100vh;
   }
 }
 
 @layer utilities {
-  /* Custom Cursor */
-  .cursor {
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    margin-left: -10px;
-    margin-top: -10px;
-    border-radius: 50%;
-    background: white;
-    mix-blend-mode: difference;
-    box-shadow: 0px 0px 10px theme("colors.primary");
-    /* transition: all 0.1s ease-in; */
-    /* transition: transform 0.3s ease; */
-    transform-origin: center center;
-    pointer-events: none;
-    z-index: 1000;
+  /* heading before */
+  .heading-before::before{
+    content: '#';
+    color: theme('colors.primary');
   }
 
-  .title {
-    font-size: clamp(4rem, 23vh, 16vw);
-    line-height: 1;
-  }
-  .text-gradient {
-    background: -webkit-linear-gradient(
-      45deg,
-      theme("colors.primary"),
-      #a855f7
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .glow-1 {
-    background-color: theme("colors.purple.500");
-    height: 160px;
-    width: 160px;
-    border-radius: 100%;
-    filter: blur(64px);
-    z-index: -10;
-    animation: animate-glow 6s linear infinite;
-  }
-  .glow-2 {
-    background-color: #f97316;
-    height: 200px;
-    width: 150px;
-    border-radius: 100%;
-    filter: blur(64px);
-    z-index: -10;
-    animation: animate-glow-2 6s linear infinite;
-  }
-
-  .featured-img::before {
-    content: attr(data-before-content);
-    color: #fcf3ea;
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    font-family: "Clash Display", sans-serif;
-    font-weight: 600;
-    word-spacing: 5px;
-  }
-
-  .animate-arrow {
-    animation: animate-arrow 1.5s ease-in-out infinite;
-  }
-
-  .arrow-after::after {
-    content: url("./../src/img/arrow-down.svg");
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: -130%;
-    left: 0;
-  }
-
-  @keyframes animate-glow {
-    0% {
-      height: 160px;
-      width: 160px;
-      transform: rotate(0deg);
-    }
-    25% {
-      height: 160px;
-      width: 200px;
-      transform: rotate(60deg);
-    }
-    50% {
-      height: 160px;
-      width: 150px;
-      transform: rotate(120deg);
-    }
-    75% {
-      height: 150px;
-      width: 250px;
-      transform: rotate(80deg);
-    }
-    100% {
-      height: 160px;
-      width: 160px;
-      transform: rotate(180deg);
-    }
-  }
-
-  @keyframes animate-glow-2 {
-    0% {
-      height: 200px;
-      width: 160px;
-      transform: rotate(0deg);
-    }
-    25% {
-      height: 240px;
-      width: 200px;
-      transform: rotate(80deg);
-    }
-    50% {
-      height: 200px;
-      width: 150px;
-      transform: rotate(30deg);
-    }
-    75% {
-      height: 160px;
-      width: 250px;
-      transform: rotate(120deg);
-    }
-    100% {
-      height: 200px;
-      width: 160px;
-      transform: rotate(180deg);
-    }
-  }
-
-  @keyframes animate-arrow {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(130%);
-    }
-  }
-
-  .menu-icon {
+  /* heading after */
+  .heading-after{
     position: relative;
-    width: 50px;
-    height: 50px;
-    /* cursor: pointer; */
-    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
   }
-  .menu-icon .menu-icon__cheeckbox {
-    display: block;
-    width: 100%;
-    height: 100%;
+  .heading-after::after{
+    content: '';
+    background-color: theme('colors.primary');
+    width: 100px;
+    height: 1px;
+    position: absolute;
+    left: calc(100% + 20px);
+    top: 50%;
+  }
+
+  /* Quote Before */
+  .quote{
     position: relative;
-    /* cursor: pointer; */
-    z-index: 2;
-    -webkit-touch-callout: none;
+  }
+  .quote-before::before{
+    content: url('./../src/img/quote-start.svg');
     position: absolute;
-    opacity: 0;
-  }
-  .menu-icon div {
-    margin: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 50px;
-    height: 12px;
-  }
-  .menu-icon span {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    border-radius: 1px;
-    transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
-  }
-  .menu-icon span:first-of-type {
-    top: 0;
-  }
-  .menu-icon span:last-of-type {
-    bottom: 0;
-  }
-  .menu-icon.active span:first-of-type,
-  .menu-icon .menu-icon__cheeckbox:checked + div span:first-of-type {
-    transform: rotate(45deg);
-    top: 5px;
-  }
-  .menu-icon.active span:last-of-type,
-  .menu-icon .menu-icon__cheeckbox:checked + div span:last-of-type {
-    transform: rotate(-45deg);
-    bottom: 5px;
-  }
-  @media (min-width: 1024px) {
-    .menu-icon.active:hover span:first-of-type,
-    .menu-icon.active:hover span:last-of-type,
-    .menu-icon:hover .menu-icon__cheeckbox:checked + div span:first-of-type,
-    .menu-icon:hover .menu-icon__cheeckbox:checked + div span:last-of-type {
-      transform: scaleX(0.9);
-    }
-    .menu-icon:hover span:first-of-type {
-      transform: scaleX(1.5);
-    }
-    .menu-icon:hover span:last-of-type {
-      transform: scaleX(1.5);
-    }
+    left: 5%;
+    top: -10px;
+    color: white;
+    height: 21;
+    width: 26;
+    background-color: black;
   }
 }

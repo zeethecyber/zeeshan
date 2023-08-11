@@ -1,120 +1,66 @@
-import { motion } from "framer-motion";
-import FeaturedImage from "../src/components/FeaturedImage";
-export default function Home() {
+import Image from "next/image";
+import HeroImg from "./../src/img/hero.png";
+import QuoteBox from "../src/components/quote-box/QuoteBox";
+
+function Home() {
   return (
-    <>
+    <div className="max-w-screen-xl mx-auto px-8 sm:px-20 overflow-hidden">
       {/* Hero Section */}
-      <section className="items-center justify-center flex hero-section h-screen">
-        <div>
-          <h1 className="text-primary font-medium title text-center">
-            Frontend <br />{" "}
-            <span className="text-white font-clash">Hashira</span>
-          </h1>
-          <div className="text-gray-1 text-xs md:text-sm text-right flex justify-between mt-4">
-            <span className="text-left inline-flex overflow-y-hidden h-min">
-              <div className="">
-                <span className="arrow-after relative animate-arrow inline-block">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M15.75 17.25L12 21m0 0l-3.75-3.75M12 21V3"
-                    />
-                  </svg>
-                </span>
-              </div>
-              <p>
-                Keep <br /> Scrolling
-              </p>
-            </span>
-            <p>
-              Available for freelance work <br /> from january 2022 <br />{" "}
-              <a href="" className="font-semibold underline">
-                Let&apos;s Talk
-              </a>
-            </p>
-          </div>
+      <div className="md:grid grid-cols-2 items-center block">
+        <div className="py-24 sm:py-40">
+          <p className="text-white font-fira text-4xl font-semibold">
+            Hi, I am <span className="text-primary">Zeeshan Asif</span> and I am
+            a Web and Mobile App <span className="text-primary">Developer</span>
+          </p>
+          <p className="text-gray-100 mt-8">
+            I craft cross platform apps including Web, IOS and Android Apps.
+            It's a place where technology meets the creativity.
+          </p>
+          <button className="text-white py-2 px-6 border border-primary hover:bg-primary duration-150 mt-8">
+            Contact Me
+          </button>
         </div>
-      </section>
+        <div>{/* <Image src={HeroImg} alt="" className="m-auto" /> */}</div>
+      </div>
+      <QuoteBox
+        text="With great power comes great electricity bill."
+        author="Dr. Wtf?"
+      />
 
       {/* About Section */}
-      <section className="max-w-7xl m-auto px-12 my-32">
-        <div className="max-w-3xl">
-          <motion.h2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ amount: "all" }}
-            className="text-4xl text-primary font-medium text-gray-1 my-8 tracking-[0.4rem]"
-          >
+      <div className="md:grid grid-cols-3 block mt-20">
+        <div className="col-span-2">
+          <h2 className="text-3xl md:text-4xl text-white heading-before heading-after">
+            about me
+          </h2>
+          <p className="text-gray-100 mt-8">
+            Hi, Zeeshan here. Obviously! <br />
+            <br />
+            I&#39;m a self-taught developer based in Lahore, Pakistan. I can
+            develop responsive websites from scratch and raise them into modern
+            user-friendly web experiences. I also do cross platform mobile app
+            development for android and ios.
+            <br /> <br /> Transforming my creativity and knowledge into apps has
+            been my passion for over a year. I have been helping various clients
+            to establish their presence online. I always strive to learn about
+            the newest technologies and frameworks.
+          </p>
+          <button className="text-white py-2 px-6 border border-primary hover:bg-primary duration-150 mt-8">
             About Me
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ amount: "all" }}
-            className=" text-gray-1 mx-auto text-xl !leading-loose text-xl"
-          >
-            Hi, Zeeshan here. Obviously! <br /> I am a front-end developer who
-            constantly seeks out innovative solutions to everyday problems. For
-            whatever reason it is you are here, welcome.
-          </motion.p>
+          </button>
         </div>
-      </section>
+      </div>
 
       {/* Works Section */}
-      <section className="max-w-7xl m-auto px-8 mt-16">
-        <motion.h2
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ amount: "all" }}
-          className="text-5xl md:text-8xl text-center font-medium text-primary tracking-[0.4rem]"
-        >
-          Featured <br /> <span className="text-white font-clash">Works</span>
-        </motion.h2>
-        <div className="grid mt-12 gap-y-16">
-          <div className="md:grid grid-cols-4">
-            <div className="col-span-2"></div>
-            <div className="col-span-2 aspect-[4/3]">
-              <FeaturedImage
-                title="DC Manager App"
-                src="https://cdn.dribbble.com/userupload/4170047/file/original-d987c61195a49b715931aedbcf6939bb.png?compress=1&resize=1024x768"
-                before="1 of 3"
-              />
-            </div>
-          </div>
-          <div className="md:grid grid-cols-4">
-            <div className="col-span-2 aspect-[4/3]">
-              <FeaturedImage
-                title="DC Customer App"
-                src="https://cdn.dribbble.com/userupload/4171388/file/original-27a9636b63947f0ebcb8e3473194d046.png?compress=1&resize=1024x768"
-                before="2 of 3"
-              />
-            </div>
-            <div className="col-span-2"></div>
-          </div>
-          <div className="md:grid grid-cols-4">
-            <div className="col-span-2"></div>
-            <div className="col-span-2 aspect-[4/3]">
-              <FeaturedImage
-                title="PING - FYP"
-                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, non."
-                src="https://cdn.dribbble.com/userupload/4170047/file/original-d987c61195a49b715931aedbcf6939bb.png?compress=1&resize=1024x768"
-                before="3 of 3"
-              />
-            </div>
-          </div>
+      <div className="md:grid grid-cols-3 block mt-20">
+        <div className="col-span-2">
+          <h2 className="text-3xl md:text-4xl text-white heading-before md:heading-after">
+            featured works
+          </h2>
         </div>
-        <h6 className="text-center font-medium underline text-2xl lg:text-4xl my-6 text-gray-1">
-          View More
-        </h6>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }
+
+export default Home;
