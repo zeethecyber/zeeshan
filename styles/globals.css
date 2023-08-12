@@ -12,15 +12,13 @@
 
   body,
   * {
-    /* background-image: url("./../src/img/grain.svg"); */
     font-family: "Fira Code", sans-serif;
-    /* cursor: none; */
   }
   body{
     background: var(--background, linear-gradient(180deg, #020108 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%));
-    /* background-color: #282C33; */
     background-repeat: no-repeat;
     min-height: 100vh;
+    overflow-x: hidden;
   }
 }
 
@@ -33,6 +31,10 @@
     overflow: hidden;
   }
 
+  .title-before::before{
+    content: '//';
+    color: theme('colors.primary');
+  }
   /* heading before */
   .heading-before::before{
     content: '#';

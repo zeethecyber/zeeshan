@@ -1,4 +1,6 @@
 import useDownloader from "react-use-downloader";
+import SkillCard from "../src/components/skill-card/SkillCard";
+import QuoteBox from "../src/components/quote-box/QuoteBox";
 
 export default function About() {
   const { size, elapsed, percentage, download, cancel, error, isInProgress } =
@@ -7,85 +9,88 @@ export default function About() {
   const fileUrl = `/assets/zeeshan_resume.pdf`;
   const filename = "Zeeshan_Resume.pdf";
 
-  console.log(isInProgress ? "Downloading" : "Not Downloading");
   return (
-    <>
+    <div className="max-w-screen-xl mx-auto px-8 sm:px-20">
       {/* Hero */}
-      <section className="h-screen container m-auto">
-        <div className="flex justify-center items-center h-full">
-          <div className="text-center">
-            <h1 className="title text-primary font-medium">
-              Zeeshan <br /> <span className="text-white font-clash">Asif</span>
-            </h1>
-            <span className="flex gap-4 items-center mt-8 justify-center">
-              <button
-                onClick={() => download(fileUrl, filename)}
-                className="font-clash text-white font-semibold text-xl underline active:opacity-95 active:scale-[0.95] cursor-none duration-150"
-              >
-                Download Resume
-              </button>
-              {isInProgress && (
-                <span className="bg-white h-4 w-4 block animate-spin"></span>
-              )}
-            </span>
+      <section>
+        <div className="mt-10">
+          <h2 className="title-before text-white font-medium text-6xl">
+            Zeeshan
+          </h2>
+          <h2 className="title-before text-white font-medium text-6xl">Asif</h2>
+        </div>
+        <div>
+          <p className="text-gray-1 text-lg my-10 max-w-3xl leading-loose">
+            Hi, Zeeshan here.
+            <br />
+            <br />
+            Obviously! I'm a self-taught developer based in Lahore, Pakistan. I
+            can develop responsive websites from scratch and raise them into
+            modern user-friendly web experiences. I also do cross platform
+            mobile app development for android and ios.
+            <br />
+            <br />
+            Transforming my creativity and knowledge into apps has been my
+            passion for over a year. I have been helping various clients to
+            establish their presence online. I always strive to learn about the
+            newest technologies and frameworks.
+          </p>
+        </div>
+        <div
+          className="flex justify-start hover:cursor-pointer"
+          onClick={() => download(fileUrl, filename)}
+        >
+          <div className="flex gap-4 items-center justify-center border border-primary py-2 px-6 hover:bg-primary duration-150">
+            <button className="text-white font-semibold text-xl active:opacity-95 active:scale-[0.95] duration-150">
+              Download Resume
+            </button>
+
+            {isInProgress ? (
+              <span className="bg-white h-4 w-4 block animate-spin"></span>
+            ) : (
+              <span className="text-white text-2xl">&#126;&gt;</span>
+            )}
           </div>
         </div>
       </section>
 
-      {/* About */}
-
-      <section className="max-w-7xl m-auto px-8">
-        <div className="grid md:grid-cols-3 gap-6 text-white">
-          <div className="row-start-2 md:row-start-1">
-            <div>
-              <h6 className="text-lg md:text-xl mb-4">Frontend Tools</h6>
-              <p className="leading-loose">
-                JavaScript(ES6+), TypeScript, HTML5, React.js, Next.js,React
-                Native, Redux, Redux Toolkit, Redux Thunk, NPM,
-                Git/Gitlab/Github/Bitbucket.
-              </p>
-            </div>
-            <div className="mt-12">
-              <h6 className="text-lg md:text-xl mb-4">UI Liberaries</h6>
-              <p className="leading-loose">
-                CSS3/SCSS/SASS, Framer Motion, GSAP, Styled Components,
-                Bootstrap, Tailwind CSS, Material UI, Chakra UI.
-              </p>
-            </div>
-            <div className="mt-12">
-              <h6 className="text-lg md:text-xl mb-4">Interests</h6>
-              <p className="leading-loose">
-                Creative Development, Artificial Intelligence, Web3.
-              </p>
-            </div>
-          </div>
-          <div className="col-span-2 text-lg md:text-2xl leading-loose">
-            <p>
-              I am a frontend developer from Lahore, Pakistan. I am constantly
-              looking for advance solutions to issues that arise in daily life.
-              In my work, I spend most of my time coming up with innovative
-              solutions to development problems.
-            </p>
-            <p className="mt-4">
-              I have been a part of this industry for over a years and within
-              those years, I have honed my analytic and collaboration skills
-              which makes working with a team easier. I have also had the
-              opportunity to work with different developers for different
-              projects.
-            </p>
-            <p className="mt-4">
-              For me, each project I have the privilege to work on is a new
-              opportunity to learn new things, meet people with ideas that
-              differ from mine and discover things about myself I never knew
-              were beneath the layers of all of me.
-            </p>
-
-            <p className="mt-4">
-              I am available for freelance jobs. Let&apos;s talk.
-            </p>
-          </div>
+      {/* Skills Section */}
+      <section className="my-20">
+        <QuoteBox
+          text="The perfect date for a developer is DD/MM/YYYY."
+          author="Dr. Who?"
+        />
+        <h2 className="text-3xl md:text-4xl text-white heading-before heading-after mt-10">
+          skills
+        </h2>
+        <div className="grid grid-cols-4 gap-8 mt-10">
+          <SkillCard
+            title="Languages"
+            skills={["Javascript", "Typescript", "Dart", "C++"]}
+          />
+          <SkillCard
+            title="Frameworks"
+            skills={["React JS", "Next JS", "React Native", "Expo", "Flutter"]}
+          />
+          <SkillCard
+            title="UI Libraries"
+            skills={[
+              "Chakra UI",
+              "Material UI",
+              "Bootstrap",
+              "Tailwind CSS",
+              "Framer Motion",
+              "GSAP",
+              "RN Elements",
+            ]}
+          />
+          <SkillCard title="Tools" skills={["Redux", "Redux Toolkit"]} />
+          <SkillCard
+            title="Others"
+            skills={["Figma", "Adobe XD", "VS Code", "HTML", "CSS"]}
+          />
         </div>
       </section>
-    </>
+    </div>
   );
 }

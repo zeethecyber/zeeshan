@@ -7,7 +7,7 @@ import dots from "./../src/img/dots.png";
 
 function Home() {
   return (
-    <div className="max-w-screen-xl mx-auto px-8 sm:px-20 overflow-hidden">
+    <div className="max-w-screen-xl mx-auto px-8 sm:px-20 overflow-hidden md:overflow-visible">
       {/* Hero Section */}
       <div className="md:grid grid-cols-2 gap-x-8 items-center block">
         <div className="py-24 sm:py-40">
@@ -15,7 +15,7 @@ function Home() {
             Hi, I am <span className="text-primary">Zeeshan Asif</span>, a Web
             and Mobile App <span className="text-primary">Developer</span>
           </p>
-          <p className="text-gray-100 mt-8">
+          <p className="text-gray-1 mt-8">
             I craft cross platform apps including Web, IOS and Android Apps.
             It's a place where technology meets the creativity.
           </p>
@@ -24,11 +24,15 @@ function Home() {
           </button>
         </div>
         <div className="self-stretch relative">
-          <Image src={shape1} alt="" className="w-48 absolute top-20 left-10" />
+          <Image
+            src={shape1}
+            alt="shape boxes"
+            className="w-40 md:w-48 absolute bottom-80 left-0 md:top-20 md:left-10 translate-x-[-50%] md:translate-x-0 z-[-1]"
+          />
           <Image
             src={dots}
             alt=""
-            className="w-48 absolute bottom-20 right-0"
+            className="w-40 md:w-48 absolute bottom-20 right-0"
           />
         </div>
       </div>
@@ -62,11 +66,11 @@ function Home() {
       </div>
 
       {/* Works Section */}
-      <div className="my-20">
+      <div className="my-20 relative">
         <h2 className="text-3xl md:text-4xl text-white heading-before md:heading-after">
           projects
         </h2>
-        <div className="grid grid-cols-3 gap-6 mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {PROJECTS.map((project, index) => {
             return (
               <ProjectCard
@@ -82,6 +86,16 @@ function Home() {
             );
           })}
         </div>
+        <Image
+          src={dots}
+          alt=""
+          className="w-40 md:w-48 absolute left-[-200px] top-0"
+        />
+        <Image
+          src={dots}
+          alt=""
+          className="w-40 md:w-48 absolute right-[-200px] bottom-0"
+        />
       </div>
 
       <QuoteBox
@@ -94,7 +108,7 @@ function Home() {
         <h2 className="text-3xl md:text-4xl text-white heading-before md:heading-after">
           client reviews
         </h2>
-        <div className="grid grid-cols-3 gap-6 mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {PROJECTS.map((project, index) => {
             return (
               <ProjectCard

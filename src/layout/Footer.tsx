@@ -8,8 +8,8 @@ function Footer() {
   return (
     <div className="py-12 border-t border-gray-1">
       <div className="max-w-screen-xl mx-auto px-8 sm:px-20">
-        <div className="flex justify-between items-center">
-          <div className="flex gap-4 items-center">
+        <div className="flex flex-wrap gap-4 justify-between items-center">
+          <div className="flex flex-wrap gap-x-4 items-center">
             <h4 className="text-white font-bold text-md">Zeeshan Asif</h4>
             <Link
               href={"mailto:zeeshanasif0007@gmail.com"}
