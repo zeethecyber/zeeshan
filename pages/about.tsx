@@ -21,13 +21,13 @@ export default function About() {
         </div>
         <div>
           <p className="text-gray-1 text-lg my-10 max-w-3xl leading-loose">
-            Hi, Zeeshan here.
+            Hi, Zeeshan here, Obviously!
             <br />
             <br />
-            Obviously! I'm a self-taught developer based in Lahore, Pakistan. I
-            can develop responsive websites from scratch and raise them into
-            modern user-friendly web experiences. I also do cross platform
-            mobile app development for android and ios.
+            I'm a self-taught developer based in Lahore, Pakistan. I can develop
+            responsive websites from scratch and raise them into modern
+            user-friendly web experiences. I also do cross platform mobile app
+            development for android and ios.
             <br />
             <br />
             Transforming my creativity and knowledge into apps has been my
@@ -63,7 +63,7 @@ export default function About() {
         <h2 className="text-3xl md:text-4xl text-white heading-before heading-after mt-10">
           skills
         </h2>
-        <div className="grid grid-cols-4 gap-8 mt-10">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-10">
           <SkillCard
             title="Languages"
             skills={["Javascript", "Typescript", "Dart", "C++"]}
