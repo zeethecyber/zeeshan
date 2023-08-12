@@ -8,16 +8,28 @@ function Header() {
           Zeeshan Asif
         </Link>
         <div className="md:flex gap-12 hidden">
-          <Link href={"/"} className="heading-before">
+          <Link
+            href={"/"}
+            className="heading-before hover:text-primary duration-100"
+          >
             home
           </Link>
-          <Link href={"/"} className="heading-before">
+          <Link
+            href={"/"}
+            className="heading-before hover:text-primary duration-100"
+          >
             about
           </Link>
-          <Link href={"/"} className="heading-before">
+          <Link
+            href={"/"}
+            className="heading-before hover:text-primary duration-100"
+          >
             works
           </Link>
-          <Link href={"/"} className="heading-before">
+          <Link
+            href={"/"}
+            className="heading-before hover:text-primary duration-100"
+          >
             contact
           </Link>
         </div>
