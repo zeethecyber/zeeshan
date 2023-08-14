@@ -1,10 +1,19 @@
 import Head from "next/head";
-import React, { ReactElement, useEffect, useRef, useState } from "react";
+import React, { ReactElement, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { gsap } from "gsap";
 import SideLinks from "../components/side-links/SideLinks";
+import { useDispatch } from "react-redux";
+import { setProjects } from "../store/reducers/projectSlice";
+import { PROJECTS } from "../data/projects";
 function AppLayout({ children }: { children: ReactElement[] | ReactElement }) {
+  const dispatch = useDispatch();
+
+  // Store project on app load
+  useEffect(() => {
+    dispatch(setProjects(PROJECTS));
+  }, []);
+
   return (
     <>
       <Head>

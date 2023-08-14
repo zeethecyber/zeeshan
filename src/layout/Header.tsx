@@ -31,17 +31,19 @@ function Header() {
             href={"/"}
             className="heading-before hover:text-primary duration-100"
           >
-            works
+            projects
           </Link>
-          <Link
+          {/* <Link
             href={"/"}
             className="heading-before hover:text-primary duration-100"
           >
             contact
-          </Link>
+          </Link> */}
         </div>
         <button
-          className="text-white text-3xl font-semibold md:hidden"
+          className={`text-white text-3xl font-semibold md:hidden duration-150 ${
+            showNav ? "opacity-0" : "opacity-100"
+          }`}
           onClick={handleShowNav}
         >
           ==
@@ -67,34 +69,37 @@ function Header() {
             <Link
               href={"/"}
               className="heading-before text-white text-4xl font-semibold"
+              onClick={handleShowNav}
             >
               home
             </Link>
           </li>
           <li>
             <Link
-              href={"/"}
+              href={"/about"}
               className="heading-before text-white text-4xl font-semibold"
+              onClick={handleShowNav}
             >
               about
             </Link>
           </li>
           <li>
             <Link
-              href={"/"}
+              href={"/works"}
               className="heading-before text-white text-4xl font-semibold"
+              onClick={handleShowNav}
             >
-              works
+              projects
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               href={"/"}
               className="heading-before text-white text-4xl font-semibold"
             >
               contact
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

@@ -11,6 +11,7 @@ interface IProjectCard {
   liveLink?: string;
   github?: string;
   googlePlay?: string;
+  item?: any;
 }
 
 function ProjectCard({
@@ -21,18 +22,26 @@ function ProjectCard({
   liveLink,
   github,
   googlePlay,
+  item,
 }: IProjectCard) {
   return (
     <div className="border border-gray-1 flex flex-col">
       <div className="aspect-[4/3] bg-red-500 relative">
-        <Image
-          src={
-            "https://cdn.dribbble.com/userupload/9242887/file/original-4f86a5ff19628966743387a8c240b1d7.png?resize=1024x768"
-          }
-          alt=""
-          fill={true}
-          className="object-cover"
-        />
+        <Link
+          href={{
+            pathname: "/project/[slug]",
+            query: { slug: item?.slug || "" },
+          }}
+        >
+          <Image
+            src={
+              "https://cdn.dribbble.com/userupload/9242887/file/original-4f86a5ff19628966743387a8c240b1d7.png?resize=1024x768"
+            }
+            alt=""
+            fill={true}
+            className="object-cover"
+          />
+        </Link>
       </div>
       <div className="py-2 px-6 border-t border-gray-1">
         <h3 className="text-white text-2xl font-medium">{title}</h3>

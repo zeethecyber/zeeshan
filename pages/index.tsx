@@ -82,12 +82,13 @@ function Home() {
               <ProjectCard
                 key={index}
                 title={project.title}
-                description={project.description}
+                description={project.short_description}
                 imageSrc={project.imgSrc}
                 tags={project.tags}
                 github={project.github}
                 liveLink={project.liveLink}
                 googlePlay={project.googlePlay}
+                item={project}
               />
             );
           })}
@@ -127,6 +128,7 @@ function Home() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {REVIEWS.map((review, index) => (
             <ReviewCard
+              key={index}
               name={review.name}
               country={review.country}
               rating={review.rating}
