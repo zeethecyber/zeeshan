@@ -18,7 +18,7 @@ function ReviewCard({ name, country, review, rating }: IReviewCard) {
         <div className="flex justify-end">
           <div className="text-white flex gap-2 mt-5">
             {Array.from({ length: rating }).map((item, index) => {
-              return <StarIcon className="h-4 w-4" />;
+              return <StarIcon key={index} className="h-4 w-4" />;
             })}
           </div>
         </div>

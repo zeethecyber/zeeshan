@@ -26,7 +26,7 @@ function ProjectCard({
 }: IProjectCard) {
   return (
     <div className="border border-gray-1 flex flex-col">
-      <div className="aspect-[4/3] bg-red-500 relative">
+      <div className="aspect-video bg-red-500 relative">
         <Link
           href={{
             pathname: "/project/[slug]",

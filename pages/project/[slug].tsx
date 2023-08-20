@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
+import GooglePlay from "../../src/icons/googlePlay";
+import GithubIcon from "../../src/icons/github";
 
 function Project() {
   const router = useRouter();
@@ -52,36 +54,30 @@ function Project() {
           View More
         </h2>
         <div className="mt-4 flex flex-wrap gap-6">
-          <Link
-            href={"/about"}
-            className="text-white py-2 px-6 border border-white inline-block"
-          >
-            Live Link &#126;&gt;
-          </Link>
-          <Link
-            href={"/about"}
-            className="text-white py-2 px-6 border border-white inline-block"
-          >
-            Github &#126;&gt;
-          </Link>
-          <Link
-            href={"/about"}
-            className="text-white py-2 px-6 border border-white inline-block"
-          >
-            Bitbucket &#126;&gt;
-          </Link>
-          <Link
-            href={"/about"}
-            className="text-white py-2 px-6 border border-white inline-block"
-          >
-            App Store &#126;&gt;
-          </Link>
-          <Link
-            href={"/about"}
-            className="text-white py-2 px-6 border border-white inline-block"
-          >
-            Play Store &#126;&gt;
-          </Link>
+          {!!project[0]?.liveLink && (
+            <Link
+              className="text-white border border-white py-2 px-3 inline-block"
+              href={project[0]?.liveLink}
+            >
+              Live Link &#126;&gt;
+            </Link>
+          )}
+          {!!project[0]?.github && (
+            <Link
+              href={project[0]?.github}
+              className="text-white border border-white py-2 px-3 inline-block flex gap-2 items-center"
+            >
+              Github <GithubIcon height={20} fill="white" />
+            </Link>
+          )}
+          {!!project[0]?.googlePlay && (
+            <Link
+              href={project[0]?.googlePlay}
+              className="text-white border border-white py-2 px-3 inline-block flex gap-2 items-center"
+            >
+              Google Play <GooglePlay height={20} fill="white" />
+            </Link>
+          )}
         </div>
       </section>
     </div>
