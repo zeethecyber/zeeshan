@@ -12,7 +12,7 @@ function AppLayout({ children }: { children: ReactElement[] | ReactElement }) {
   // Store project on app load
   useEffect(() => {
     dispatch(setProjects(PROJECTS));
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

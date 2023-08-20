@@ -24,8 +24,8 @@ export default function About() {
             Hi, Zeeshan here, Obviously!
             <br />
             <br />
-            I'm a self-taught developer based in Lahore, Pakistan. I can develop
-            responsive websites from scratch and raise them into modern
+            I&apos;m a self-taught developer based in Lahore, Pakistan. I can
+            develop responsive websites from scratch and raise them into modern
             user-friendly web experiences. I also do cross platform mobile app
             development for android and ios.
             <br />

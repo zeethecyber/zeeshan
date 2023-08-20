@@ -20,7 +20,7 @@ function Home() {
           </p>
           <p className="text-gray-1 mt-8">
             I craft cross platform apps including Web, IOS and Android Apps.
-            It's a place where technology meets the creativity.
+            It&apos;s a place where technology meets the creativity.
           </p>
           <button className="text-white py-2 px-6 border border-primary hover:bg-primary duration-150 mt-8">
             Contact Me &#126;&gt;
