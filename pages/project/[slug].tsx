@@ -23,9 +23,7 @@ function Project() {
         <div className="mt-12">
           <div className="aspect-video bg-red-500 relative max-w-3xl m-auto">
             <Image
-              src={
-                "https://cdn.dribbble.com/userupload/9242887/file/original-4f86a5ff19628966743387a8c240b1d7.png?resize=1024x768"
-              }
+              src={project[0]?.imgSrc}
               alt=""
               fill={true}
               className="object-cover"

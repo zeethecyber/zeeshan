@@ -6,7 +6,7 @@ import GooglePlay from "../../icons/googlePlay";
 interface IProjectCard {
   title: string;
   description: string;
-  imageSrc: string;
+  imageSrc: any;
   tags: string[];
   liveLink?: string;
   github?: string;
@@ -33,14 +33,7 @@ function ProjectCard({
             query: { slug: item?.slug || "" },
           }}
         >
-          <Image
-            src={
-              "https://cdn.dribbble.com/userupload/9242887/file/original-4f86a5ff19628966743387a8c240b1d7.png?resize=1024x768"
-            }
-            alt=""
-            fill={true}
-            className="object-cover"
-          />
+          <Image src={imageSrc} alt="" fill={true} className="object-cover" />
         </Link>
       </div>
       <div className="py-2 px-6 border-t border-gray-1">
@@ -56,7 +49,7 @@ function ProjectCard({
         <div className="mt-6 mb-3 flex gap-4 items-center">
           {!!liveLink && (
             <Link
-              className="text-white border border-gray-1 py-2 px-3 inline-block"
+              className="text-white border border-gray-1 py-2 px-3 inline-block hover:border-primary hover:text-primary duration-150"
               href={liveLink}
             >
               Live &lt;&#126;&gt;

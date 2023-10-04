@@ -22,9 +22,12 @@ function Home() {
             I craft cross platform apps including Web, IOS and Android Apps.
             It&apos;s a place where technology meets the creativity.
           </p>
-          <button className="text-white py-2 px-6 border border-primary hover:bg-primary duration-150 mt-8">
+          <a
+            href="mailto:zeeshanasif0007@gmail.com"
+            className="inline-block text-white py-2 px-6 border border-primary hover:bg-primary duration-150 mt-8"
+          >
             Contact Me &#126;&gt;
-          </button>
+          </a>
         </div>
         <div className="self-stretch relative">
           <Image
@@ -41,7 +44,7 @@ function Home() {
       </div>
       <QuoteBox
         text="With great power comes great electricity bill."
-        author="Dr. Wtf?"
+        author="Dr. Who?"
       />
 
       {/* About Section */}
@@ -107,7 +110,7 @@ function Home() {
 
       <QuoteBox
         text="Software engineers don't have bugs, they just have unexpected features in their lives!"
-        author="Dr. Wtf?"
+        author="Dr. Who?"
       />
 
       {/* Review Section */}
