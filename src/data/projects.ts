@@ -1,5 +1,6 @@
 import dcImage from "./../../public/assets/images/delivery_champs.png";
 import wanterImage from "./../../public/assets/images/wanter_market.png";
+import shoppingBuddy from "./../../public/assets/images/shopping-buddy.webp";
 export const PROJECTS = [
   {
     id: 1,
@@ -29,13 +30,15 @@ export const PROJECTS = [
   },
   {
     id: 1,
-    title: "Wanter Market",
-    imgSrc: wanterImage,
-    slug: "wanter-market",
-    short_description: "E-commerce app made for a client on fiverr.",
+    title: "Shopping Buddy",
+    imgSrc: shoppingBuddy,
+    slug: "shopping-buddy",
+    short_description: "Cross-platform E-commerce solution, made in Flutter.",
     long_description: "",
-    tags: ["React JS", "Javascript", "TailwindCss"],
+    tags: ["Flutter", "Dart", "Firebase", "Laravel"],
     github: "",
-    liveLink: "https://wantermarket.com/",
+    liveLink: "",
+    googlePlay:
+      "https://play.google.com/store/apps/details?id=com.shoppingbuddy.customer_app&pcampaignid=web_share",
   },
 ];

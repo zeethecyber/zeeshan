@@ -70,8 +70,18 @@ export default function About() {
           />
           <SkillCard
             title="Frameworks"
-            skills={["React JS", "Next JS", "React Native", "Expo", "Flutter"]}
+            skills={[
+              "React JS",
+              "Next JS",
+              "React Native",
+              "Expo",
+              "Flutter",
+              "NodeJS",
+              "ExpressJS",
+              "Laravel",
+            ]}
           />
+          <SkillCard title="Database" skills={["Mongo DB", "MySQL"]} />
           <SkillCard
             title="UI Libraries"
             skills={[
@@ -84,7 +94,18 @@ export default function About() {
               "RN Elements",
             ]}
           />
-          <SkillCard title="Tools" skills={["Redux", "Redux Toolkit"]} />
+          <SkillCard
+            title="Tools"
+            skills={[
+              "Redux",
+              "Redux Toolkit",
+              "GetX",
+              "Firebase",
+              "FCM",
+              "Firebase Auth",
+              "Firebase Storage",
+            ]}
+          />
           <SkillCard
             title="Others"
             skills={["Figma", "Adobe XD", "VS Code", "HTML", "CSS"]}

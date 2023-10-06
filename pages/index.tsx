@@ -84,13 +84,13 @@ function Home() {
             return (
               <ProjectCard
                 key={index}
-                title={project.title}
-                description={project.short_description}
-                imageSrc={project.imgSrc}
-                tags={project.tags}
-                github={project.github}
-                liveLink={project.liveLink}
-                googlePlay={project.googlePlay}
+                title={project?.title}
+                description={project?.short_description}
+                imageSrc={project?.imgSrc}
+                tags={project?.tags}
+                github={project?.github}
+                liveLink={project?.liveLink}
+                googlePlay={project?.googlePlay}
                 item={project}
               />
             );
