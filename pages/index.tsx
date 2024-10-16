@@ -1,147 +1,139 @@
-import Image from "next/image";
-import QuoteBox from "../src/components/quote-box/QuoteBox";
-import ProjectCard from "../src/components/project-card/ProjectCard";
-import { PROJECTS } from "../src/data/projects";
-import shape from "./../src/img/shape-1.png";
-import dots from "./../src/img/dots.png";
-import ReviewCard from "../src/components/reviewCard/ReviewCard";
-import { REVIEWS } from "../src/data/reviews";
-import Link from "next/link";
-
-function Home() {
+export default function Home() {
   return (
-    <div className="max-w-screen-xl mx-auto px-8 sm:px-20 overflow-hidden md:overflow-visible">
-      {/* Hero Section */}
-      <div className="md:grid grid-cols-2 gap-x-8 items-center block">
-        <div className="py-24 sm:py-40">
-          <p className="text-white font-fira text-4xl font-semibold">
-            Hi, I am <span className="text-primary">Zeeshan Asif</span>, a Web
-            and Mobile App <span className="text-primary">Developer</span>
-          </p>
-          <p className="text-gray-1 mt-8">
-            I craft cross platform apps including Web, IOS and Android Apps.
-            It&apos;s a place where technology meets the creativity.
-          </p>
-          <a
-            href="mailto:zeeshanasif0007@gmail.com"
-            className="inline-block text-white py-2 px-6 border border-primary hover:bg-primary duration-150 mt-8"
-          >
-            Contact Me &#126;&gt;
-          </a>
-        </div>
-        <div className="self-stretch relative">
-          <Image
-            src={shape}
-            alt="shape boxes"
-            className="w-40 md:w-48 absolute bottom-80 left-0 md:top-20 md:left-10 translate-x-[-50%] md:translate-x-0 z-[-1]"
-          />
-          <Image
-            src={dots}
-            alt=""
-            className="w-40 md:w-48 absolute bottom-20 right-0"
-          />
-        </div>
-      </div>
-      <QuoteBox
-        text="With great power comes great electricity bill."
-        author="Dr. Who?"
-      />
+    <div>
+      {/* Revealing Screen */}
+      {/* <div className="fixed inset-0 bg-black flex items-center justify-center">
+        <div className="h-12 w-12 rounded-full bg-white"></div>
+      </div> */}
+      <div className="max-w-5xl mx-auto grid grid-cols-2 gap-6 px-8 h-screen overflow-hidden">
+        <div className="py-20 flex flex-col justify-between">
+          <div>
+            <h1 className="text-7xl font-bold">Zeeshan Asif</h1>
+            <h3 className="text-2xl font-medium mt-4">
+              Senior Software Engineer
+            </h3>
+            <p className="mt-4">
+              I make web applications, mobile applications and happy clients.
+            </p>
 
-      {/* About Section */}
-      <div className="md:grid grid-cols-3 block mt-20">
-        <div className="col-span-2">
-          <h2 className="text-3xl font-semibold md:text-4xl text-white heading-before heading-after">
-            about me
-          </h2>
-          <p className="text-gray-1 mt-8">
-            Hi, Zeeshan here. Obviously! <br />
-            <br />
-            I&#39;m a self-taught developer based in Lahore, Pakistan. I can
-            develop responsive websites from scratch and raise them into modern
-            user-friendly web experiences. I also do cross platform mobile app
-            development for android and ios.
-            <br /> <br /> Transforming my creativity and knowledge into apps has
-            been my passion for over a year. I have been helping various clients
-            to establish their presence online. I always strive to learn about
-            the newest technologies and frameworks.
-          </p>
-          <Link
-            href={"/about"}
-            className="text-white py-2 px-6 border border-primary hover:bg-primary duration-150 mt-8 inline-block"
-          >
-            Read More &#126;&gt;
-          </Link>
+            <ul className="mt-8 grid gap-3">
+              <li>
+                <span className="text-xl font-semibold font-condensed">
+                  About
+                </span>
+              </li>
+              <li>
+                <span className="text-xl font-semibold font-condensed text-black/50">
+                  Experience
+                </span>
+              </li>
+              <li>
+                <span className="text-xl font-semibold font-condensed text-black/50">
+                  Projects
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul className="flex items-center gap-8">
+              <li className="hover:-translate-y-0.5 duration-300">
+                <a
+                  href="https://twitter.com/zeeshanasif"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Twitter
+                </a>
+              </li>
+              <li className="hover:-translate-y-0.5 duration-300">
+                <a
+                  href="https://twitter.com/zeeshanasif"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li className="hover:-translate-y-0.5 duration-300">
+                <a
+                  href="https://twitter.com/zeeshanasif"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Fiverr
+                </a>
+              </li>
+              <li className="hover:-translate-y-0.5 duration-300">
+                <a
+                  href="https://twitter.com/zeeshanasif"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Upwork
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+        <div className="overflow-auto no-scrollbar">
+          <div className="my-20">
+            <div className="grid gap-4">
+              <p>
+                In 2019, I started my career as a software engineer. I have
+                worked with many clients and companies to build web
+                applications, mobile applications and APIs. I have worked with
+                many technologies like React, Node.js, Express, MongoDB, MySQL,
+                PostgreSQL, Firebase, Flutter, Dart, and many more.
+              </p>
+              <p>
+                In 2019, I started my career as a software engineer. I have
+                worked with many clients and companies to build web
+                applications, mobile applications and APIs. I have worked with
+                many technologies like{" "}
+                <span className="font-bold">
+                  React, Node.js, Express, MongoDB, MySQL, PostgreSQL, Firebase,
+                  Flutter, Dart,
+                </span>{" "}
+                and many more.
+              </p>
+              <p>
+                In 2019, I started my career as a software engineer. I have
+                worked with many clients and companies to build web
+                applications, mobile applications and APIs. I have worked with
+                many technologies like React, Node.js, Express, MongoDB, MySQL,
+                PostgreSQL, Firebase, Flutter, Dart, and many more.
+              </p>
+            </div>
 
-      {/* Works Section */}
-      <div className="my-20 relative">
-        <h2 className="text-3xl font-semibold md:text-4xl text-white heading-before md:heading-after">
-          projects
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          {PROJECTS.map((project, index) => {
-            return (
-              <ProjectCard
-                key={index}
-                title={project?.title}
-                description={project?.short_description}
-                imageSrc={project?.imgSrc}
-                tags={project?.tags}
-                github={project?.github}
-                liveLink={project?.liveLink}
-                googlePlay={project?.googlePlay}
-                item={project}
-              />
-            );
-          })}
-        </div>
-        <Image
-          src={dots}
-          alt=""
-          className="w-40 md:w-48 absolute left-[-200px] top-0"
-        />
-        <Image
-          src={dots}
-          alt=""
-          className="w-40 md:w-48 absolute right-[-200px] bottom-0"
-        />
-      </div>
+            {/* Experience */}
 
-      <QuoteBox
-        text="Software engineers don't have bugs, they just have unexpected features in their lives!"
-        author="Dr. Who?"
-      />
-
-      {/* Review Section */}
-      <div className="my-20">
-        <h2 className="text-3xl font-semibold md:text-4xl text-white heading-before md:heading-after">
-          client reviews
-        </h2>
-        <p className="text-gray-1 mt-12">
-          All these reviews are from verified clients on Fiverr.{" "}
-          <Link
-            href={"https://www.fiverr.com/zeeshan_016"}
-            className="underline"
-            target="_blank"
-          >
-            Check my profile
-          </Link>
-        </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          {REVIEWS.map((review, index) => (
-            <ReviewCard
-              key={index}
-              name={review.name}
-              country={review.country}
-              rating={review.rating}
-              review={review.review}
-            />
-          ))}
+            <div className="mt-40 grid gap-4">
+              <ExperienceCard />
+              <ExperienceCard />
+              <ExperienceCard />
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default Home;
+const ExperienceCard = () => {
+  return (
+    <div className="border border-black p-4 hover:bg-black hover:text-white duration-300 cursor-pointer">
+      <h5 className="font-bold">
+        Project Manager | Senior FullStack Developer
+      </h5>
+      <p className="text-sm font-medium">2019 - 2024</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta
+        voluptatum, laborum animi ea eveniet exercitationem neque aspernatur
+        quae, saepe commodi odio suscipit dolorem, veritatis quam. Odit
+        voluptatibus laudantium cumque at saepe natus iusto temporibus fugiat
+        magni consectetur! Mollitia est, voluptas excepturi aliquid corrupti
+        perferendis facere tempora quo amet libero ea?
+      </p>
+    </div>
+  );
+};

@@ -1,73 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
-  
-  /* Fira Code Font */
-  @font-face {
-    font-family: "Fira Code";
-    src: url(./../src/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf);
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-condensed;
+  }
+  body {
+    background-color: #e7e2dc;
+    @apply font-roboto;
   }
 
-  body,
-  * {
-    font-family: "Fira Code", sans-serif;
-  }
-  body{
-    background: var(--background, linear-gradient(180deg, #020108 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%));
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-}
-
-@layer utilities {
-
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;  
-    overflow: hidden;
-  }
-
-  .title-before::before{
-    content: '//';
-    color: theme('colors.primary');
-  }
-  /* heading before */
-  .heading-before::before{
-    content: '#';
-    color: theme('colors.primary');
-  }
-
-  /* heading after */
-  .heading-after{
-    position: relative;
-    display: inline-block;
-  }
-  .heading-after::after{
-    content: '';
-    background-color: theme('colors.primary');
-    width: 50px;
-    height: 1px;
-    position: absolute;
-    left: calc(100% + 20px);
-    top: 50%;
-  }
-
-  /* Quote Before */
-  .quote{
-    position: relative;
-  }
-  .quote-before::before{
-    content: url('./../src/img/quote-start.svg');
-    position: absolute;
-    left: 5%;
-    top: -10px;
-    color: white;
-    height: 21;
-    width: 26;
-    background-color: black;
+  /* hide body scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }

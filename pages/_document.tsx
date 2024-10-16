@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta name="theme-color" content="#C778DD" />
       </Head>
-      <body className="scrollbar-hide">
+      <body className="no-scrollbar">
         <Main />
         <NextScript />
       </body>

@@ -7,10 +7,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      // clash: ["Clash Display", "sans-serif"],
-      // archivo: ["Archivo", "sans-serif"],
-      // poppins: ["Poppins", "sans-serif"],
-      fira: ["Fira Code", "sans-serif"],
+      condensed: ["Roboto Condensed", "sans-serif"],
+      roboto: ["Roboto", "sans-serif"],
     },
     extend: {
       colors: {
