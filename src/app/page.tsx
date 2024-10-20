@@ -165,7 +165,7 @@ export default function Home() {
             start: "top bottom",
             end: "top center",
             scrub: 1,
-            markers: true,
+            // markers: true,
           },
           scale: 1,
         });
