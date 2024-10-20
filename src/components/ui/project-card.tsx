@@ -8,8 +8,10 @@ type Props = {
 
 export default function ProjectCard({ title, description, imageUrl }: Props) {
   return (
-    <div>
-      <Image src={imageUrl} width={800} height={400} alt="" />
+    <div style={{ scale: "0.75" }} className="project-card">
+      <div className="aspect-square relative">
+        <Image src={imageUrl} fill className="object-cover size-full" alt="" />
+      </div>
       <div>
         <h3 className="text-3xl font-medium mt-4 tracking-wider">{title}</h3>
         <p>{description}</p>
