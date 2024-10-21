@@ -15,7 +15,7 @@ export default function SidePanel({ activeSection }: Props) {
   return (
     <div className="py-20 flex flex-col justify-between h-full">
       <div>
-        <h1 className="text-7xl font-bold heading">ZEETHECYBER</h1>
+        <h1 className="text-5xl lg:text-7xl font-bold heading">ZEETHECYBER</h1>
         <h2 className="text-3xl font-medium mt-4 subheading opacity-0"></h2>
         <p className="mt-4 helper-text opacity-0"></p>
 
@@ -68,17 +68,28 @@ export default function SidePanel({ activeSection }: Props) {
       </div>
       <div>
         <ul className="flex items-center gap-8">
-          <li className="social-link opacity-0">
-            <a href="">Fiverr</a>
+          <li className="social-link opacity-0 hover:-translate-y-1 duration-150">
+            <a href="https://www.fiverr.com/zeeshan_016" target="_blank">
+              Fiverr
+            </a>
           </li>
-          <li className="social-link opacity-0">
-            <a href="">Upwork</a>
+          <li className="social-link opacity-0 hover:-translate-y-1 duration-150">
+            <a
+              href="https://www.upwork.com/freelancers/~016bde0da63ae42b8d"
+              target="_blank"
+            >
+              Upwork
+            </a>
           </li>
-          <li className="social-link opacity-0">
-            <a href="">Github</a>
+          <li className="social-link opacity-0 hover:-translate-y-1 duration-150">
+            <a href="https://github.com/zeethecyber" target="_blank">
+              Github
+            </a>
           </li>
-          <li className="social-link opacity-0">
-            <a href="">LinkedIn</a>
+          <li className="social-link opacity-0 hover:-translate-y-1 duration-150">
+            <a href="https://www.linkedin.com/in/zeeshan-008/" target="_blank">
+              LinkedIn
+            </a>
           </li>
         </ul>
       </div>
