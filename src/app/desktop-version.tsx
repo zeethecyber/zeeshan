@@ -159,9 +159,9 @@ export default function DesktopVersion() {
       });
 
       gsap.utils.toArray(".project-card").forEach((card) => {
-        gsap.to(card, {
+        gsap.to(card as Element, {
           scrollTrigger: {
-            trigger: card,
+            trigger: card as Element,
             start: "top bottom",
             end: "top center",
             scrub: 1,

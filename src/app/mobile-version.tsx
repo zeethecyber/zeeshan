@@ -16,7 +16,7 @@ export default function MobileVersion() {
   gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
   const container = useRef<HTMLDivElement>(null);
 
-  const [activeSection, setActiveSection] = useState("section-1");
+  const [activeSection] = useState("section-1");
 
   useGSAP(
     () => {
@@ -81,9 +81,9 @@ export default function MobileVersion() {
       });
 
       gsap.utils.toArray(".project-card").forEach((card) => {
-        gsap.to(card, {
+        gsap.to(card as Element, {
           scrollTrigger: {
-            trigger: card,
+            trigger: card as Element,
             start: "top bottom",
             end: "top center",
             scrub: 1,
