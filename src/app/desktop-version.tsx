@@ -171,7 +171,7 @@ export default function DesktopVersion() {
         });
       });
     },
-    { scope: container.current || undefined }
+    { scope: container.current || undefined, dependencies: [] }
   );
 
   return (

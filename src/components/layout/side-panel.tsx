@@ -91,6 +91,14 @@ export default function SidePanel({ activeSection }: Props) {
               LinkedIn
             </a>
           </li>
+          <li className="social-link opacity-0 hover:-translate-y-1 duration-150">
+            <a
+              href="https://wa.me/923124072852?text=Hi%21+Let%27s+discuss+about+a+project."
+              target="_blank"
+            >
+              WhatsApp
+            </a>
+          </li>
         </ul>
       </div>
     </div>

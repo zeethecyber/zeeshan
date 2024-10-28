@@ -4,9 +4,15 @@ type Props = {
   title: string;
   description: string;
   imageUrl: string;
+  technologies: string[];
 };
 
-export default function ProjectCard({ title, description, imageUrl }: Props) {
+export default function ProjectCard({
+  title,
+  description,
+  imageUrl,
+  technologies,
+}: Props) {
   return (
     <div style={{ scale: "0.75" }} className="project-card">
       <div className="aspect-square relative">
@@ -17,15 +23,14 @@ export default function ProjectCard({ title, description, imageUrl }: Props) {
         <p>{description}</p>
       </div>
       <ul className="mt-4 flex items-center gap-4">
-        <li className="border border-foreground rounded-full px-4 py-1 cursor-pointer hover:bg-foreground hover:text-background duration-100">
-          Next.js
-        </li>
-        <li className="border border-foreground rounded-full px-4 py-1 cursor-pointer hover:bg-foreground hover:text-background duration-100">
-          Node.js
-        </li>
-        <li className="border border-foreground rounded-full px-4 py-1 cursor-pointer hover:bg-foreground hover:text-background duration-100">
-          MongoDB
-        </li>
+        {technologies?.map((tech, index) => (
+          <li
+            key={index}
+            className="border border-foreground rounded-full px-4 py-1 cursor-pointer hover:bg-foreground hover:text-background duration-100"
+          >
+            {tech}
+          </li>
+        ))}
       </ul>
     </div>
   );
