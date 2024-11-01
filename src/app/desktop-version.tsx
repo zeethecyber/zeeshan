@@ -130,20 +130,20 @@ export default function DesktopVersion() {
       );
 
       // Background color change for section-6
-      gsap.fromTo(
-        "body",
-        {},
-        {
-          scrollTrigger: {
-            trigger: "#section-6",
-            start: "top center",
-            end: "+=100px",
-            scrub: 1,
-          },
-          backgroundColor: "#011627",
-          color: "#FEF9F2",
-        }
-      );
+      // gsap.fromTo(
+      //   "body",
+      //   {},
+      //   {
+      //     scrollTrigger: {
+      //       trigger: "#section-6",
+      //       start: "top center",
+      //       end: "+=100px",
+      //       scrub: 1,
+      //     },
+      //     backgroundColor: "#CBFB45",
+      //     color: "#000",
+      //   }
+      // );
 
       // Experience card animations
       gsap.to(".experience-card", {

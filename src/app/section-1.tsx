@@ -11,11 +11,11 @@ export default function Section1() {
         <Image
           src={"/images/zeeshan-bg.png"}
           alt="Zeeshan Asif | Full Stack Developer"
-          className="grayscale relative z-10 duration-200 cursor-pointer group-hover:grayscale-0"
+          className=" rounded-lg relative z-10 duration-200 cursor-pointer grayscale group-hover:grayscale-0"
           height={300}
           width={300}
         />
-        <div className="absolute size-full border border-foreground top-3 left-3 group-hover:top-2 group-hover:left-2 duration-200"></div>
+        <div className="rounded-lg absolute size-full bg-primary top-2 left-2 group-hover:top-1 group-hover:left-1 duration-200"></div>
       </div>
       <div className="flex flex-col items-center gap-8">
         <span className="scroll-text opacity-0">Scroll Down</span>

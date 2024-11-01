@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Roboto_Condensed, Roboto } from "next/font/google";
+import { Space_Grotesk, Outfit } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
 
-const robotoCondensed = Roboto_Condensed({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-roboto-condensed",
+  variable: "--font-spaceGrotesk",
 });
 
-const roboto = Roboto({
+const outfit = Outfit({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
-  variable: "--font-roboto",
+  variable: "--font-outfit",
 });
 
 export const metadata: Metadata = {
@@ -39,17 +39,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${robotoCondensed.variable} ${roboto.variable} antialiased hide-scrollbar`}
+        className={`${spaceGrotesk.variable} ${outfit.variable} antialiased hide-scrollbar`}
       >
+        <div className="size-[500px] rounded-full bg-primary fixed top-0 left-0 blur-[300px] opacity-60 -z-10"></div>
+        <div className="size-60 rounded-full bg-primary fixed bottom-0 right-0 blur-[200px] opacity-70 -z-10"></div>
         {children}
       </body>
-      <Toaster
-        richColors
-        visibleToasts={2}
-        toastOptions={{
-          className: "rounded-none",
-        }}
-      />
+      <Toaster visibleToasts={2} />
     </html>
   );
 }

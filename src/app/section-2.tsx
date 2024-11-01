@@ -2,9 +2,9 @@ export default function Section2() {
   return (
     <section
       id="section-2"
-      className="text-xl font-light tracking-wider text-justify grid gap-4"
+      className="text-xl font-extralight tracking-wider text-justify grid gap-4"
     >
-      <p className="font-semibold">Hello People! 👋🏻</p>
+      <p className="font-normal">Hello People! 👋🏻</p>
       <p>
         My journey in the tech world began back in{" "}
         <span className="font-medium">2021</span> while I was still pursuing my
