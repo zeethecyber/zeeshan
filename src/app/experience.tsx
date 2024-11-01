@@ -1,6 +1,6 @@
 import ExperienceCard from "@/components/ui/experience-card";
 
-export default function Section3() {
+export default function ExperienceSection() {
   return (
     <section id="section-3" className="mt-40 grid gap-6">
       <ExperienceCard

@@ -4,11 +4,11 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, TextPlugin } from "gsap/all";
 import { useRef, useState } from "react";
 
-import Section1 from "./section-1";
-import Section2 from "./section-2";
-import Section3 from "./section-3";
-import Section4 from "./section-4";
-import Section5 from "./section-5";
+import IntroSection from "./intro";
+import AboutSection from "./about";
+import ExperienceSection from "./experience";
+import ProjectSection from "./projects";
+import ContactSection from "./contact";
 import Footer from "@/components/layout/footer";
 import SidePanel from "@/components/layout/side-panel";
 
@@ -103,11 +103,11 @@ export default function MobileVersion() {
           <SidePanel activeSection={activeSection} />
         </div>
         <div id="right-container">
-          <Section1 />
-          <Section2 />
-          <Section3 />
-          <Section4 />
-          <Section5 />
+          <IntroSection />
+          <AboutSection />
+          <ExperienceSection />
+          <ProjectSection />
+          <ContactSection />
         </div>
       </div>
       <Footer />

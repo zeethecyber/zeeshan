@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 
-export default function Section5() {
+export default function ContactSection() {
   const [loading, setLoading] = useState(false);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

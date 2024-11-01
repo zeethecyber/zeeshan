@@ -1,4 +1,4 @@
-export default function Section2() {
+export default function AboutSection() {
   return (
     <section
       id="section-2"

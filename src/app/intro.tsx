@@ -1,7 +1,7 @@
 import { ArrowDown } from "@/svg/svg-lib";
 import Image from "next/image";
 
-export default function Section1() {
+export default function IntroSection() {
   return (
     <section
       id="section-1"
