@@ -23,7 +23,10 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const closeModal = () => {
-    setModalData(null);
+    // Delay closing the modal to allow the animation to finish
+    setTimeout(() => {
+      setModalData(null);
+    }, 500);
     setModalOpen(false);
   };
 

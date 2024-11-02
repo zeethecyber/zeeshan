@@ -23,7 +23,7 @@ export default function ProjectCard({
       </div>
       <div className="bg-white/10 backdrop-blur-md border border-white/35 p-4 rounded-lg mt-4">
         <div>
-          <h3 className="text-primary text-3xl font-medium tracking-wider">
+          <h3 className="text-primary text-2xl md:text-3xl font-medium tracking-wider">
             {title}
           </h3>
           <p className="line-clamp-2">{description}</p>
