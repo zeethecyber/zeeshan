@@ -6,16 +6,16 @@ export const PROJECTS = [
     image: "/images/payon.png",
     technologies: ["Laravel", "Next.js", "MySQL"],
     github: "https://github.com",
-    live: "https://google.com",
+    live: "https://payon.app/",
   },
   {
     title: "Colosseum - Crypto Exchange",
-    description:
-      "Colosseum is an organization that integrates three pillars: Hackathon, Accelerator, and Venture Fund.",
+    description: `Colosseum is an organization that integrates three pillars: Hackathon, Accelerator, and Venture Fund.
+Colosseum runs online hackathons for the Solana Foundation and the broader ecosystem.`,
     image: "/images/colosseum.png",
     technologies: ["Symfony", "Vue.js", "MySQL"],
     github: "https://github.com",
-    live: "https://google.com",
+    live: "https://www.colosseum.org/",
   },
   {
     title: "Vera AI - Chatbot",
@@ -24,6 +24,6 @@ export const PROJECTS = [
     image: "/images/vera.png",
     technologies: ["Python", "OpenAI", "Vue.js"],
     github: "https://github.com",
-    live: "https://google.com",
+    live: "https://veratheai.com/",
   },
 ];

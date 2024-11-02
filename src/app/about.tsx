@@ -6,14 +6,12 @@ export default function AboutSection() {
     >
       <p className="font-normal">Hello People! 👋🏻</p>
       <p>
-        My journey in the tech world began back in{" "}
-        <span className="font-medium">2021</span> while I was still pursuing my
-        degree. I vividly remember the excitement of landing my first gig on{" "}
-        <span className="font-medium">Fiverr</span>, even if it was just for{" "}
-        <span className="font-medium">$10</span>. Since then, I&apos;ve had the
-        pleasure of collaborating with numerous clients and teams, helping build
-        everything from small-scale projects to full-fledged{" "}
-        <span className="font-medium">web and mobile applications</span>.
+        I’m a Full-Stack Developer with a passion for building web applications
+        that are both effective and user-friendly. Over the years, I’ve had the
+        chance to work on projects across various fields, like e-commerce and
+        restaurant management, focusing on solutions that align closely with
+        what clients need. My priority is always to deliver quality results that
+        add real value and make a difference for each project.
       </p>
       <p>
         Today, I&apos;m a{" "}

@@ -1,23 +1,21 @@
+import { useAppContext } from "@/context/app-context";
+import { PROJECTS } from "@/data/projects";
 import Image from "next/image";
 
 type Props = {
-  title: string;
-  description: string;
-  imageUrl: string;
-  technologies: string[];
+  data: (typeof PROJECTS)[0];
 };
 
 export default function ProjectCard({
-  title,
-  description,
-  imageUrl,
-  technologies,
+  data: { title, description, image, technologies, github, live },
 }: Props) {
+  const { openModal } = useAppContext();
+
   return (
     <div style={{ scale: "0.75" }} className="project-card">
       <div className="aspect-square relative">
         <Image
-          src={imageUrl}
+          src={image}
           fill
           className="object-cover size-full rounded-lg"
           alt=""
@@ -29,8 +27,23 @@ export default function ProjectCard({
             {title}
           </h3>
           <p className="line-clamp-2">{description}</p>
+          <button
+            className="text-primary font-space font-medium text-sm"
+            onClick={() =>
+              openModal({
+                title,
+                description,
+                image,
+                technologies,
+                github,
+                live,
+              })
+            }
+          >
+            Read More
+          </button>
         </div>
-        <ul className="mt-4 flex items-center gap-4">
+        <ul className="mt-4 flex items-center gap-4 text-sm">
           {technologies?.map((tech, index) => (
             <li
               key={index}

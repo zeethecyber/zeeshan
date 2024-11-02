@@ -1,3 +1,4 @@
+import Button from "@/components/ui/button";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -56,9 +57,10 @@ export default function ContactSection() {
               className="p-4 border-b border-foreground placeholder:text-inherit bg-transparent focus:outline-none resize-none"
               rows={5}
             ></textarea>
-            <button className="mt-8 w-full p-4 bg-secondary text-white font-bold font-space active:after:top-0 active:after:left-0 after:duration-100 duration-100 rounded-lg relative after:absolute after:size-full after:bg-primary after:rounded-lg after:top-2 after:left-2 after:-z-10">
+            {/* <button className="mt-8 w-full p-4 bg-secondary text-white font-bold font-space active:after:top-0 active:after:left-0 after:duration-100 duration-100 rounded-lg relative after:absolute after:size-full after:bg-primary after:rounded-lg after:top-2 after:left-2 after:-z-10">
               {loading ? "Sending your words..." : "Get Started"}
-            </button>
+            </button> */}
+            <Button>{loading ? "Sending your words..." : "Get Started"}</Button>
           </div>
         </form>
       </div>

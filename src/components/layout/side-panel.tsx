@@ -48,7 +48,7 @@ export default function SidePanel({ activeSection }: Props) {
               className="nav-link opacity-0 flex items-center cursor-pointer gap-4 group"
             >
               <div
-                className={`h-0.5 group-hover:w-12 duration-150 ease-in-out ${
+                className={`h-1 rounded-lg group-hover:w-12 duration-150 ease-in-out ${
                   activeSection === section.id
                     ? "w-10 bg-secondary"
                     : "w-6 bg-white"
