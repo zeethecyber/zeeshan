@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function IntroSection() {
   return (
     <section
-      id="section-1"
+      id="section-intro"
       className="min-h-screen hidden lg:flex flex-col justify-between items-center gap-8 py-20"
     >
       <div className="scroll-text opacity-0 relative group">

@@ -11,6 +11,7 @@ import ProjectSection from "./projects";
 import ContactSection from "./contact";
 import Footer from "@/components/layout/footer";
 import SidePanel from "@/components/layout/side-panel";
+import ReviewsSection from "./reviews";
 
 export default function MobileVersion() {
   gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
@@ -107,6 +108,7 @@ export default function MobileVersion() {
           <AboutSection />
           <ExperienceSection />
           <ProjectSection />
+          <ReviewsSection />
           <ContactSection />
         </div>
       </div>

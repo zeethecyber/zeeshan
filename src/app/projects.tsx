@@ -3,7 +3,7 @@ import { PROJECTS } from "@/data/projects";
 
 export default function ProjectSection() {
   return (
-    <section id="section-4">
+    <section id="section-projects">
       <div className="mt-40 grid gap-12">
         {PROJECTS.map((project, index) => (
           <ProjectCard key={index} data={project} />

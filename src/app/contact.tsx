@@ -30,7 +30,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="section-5">
+    <section id="section-contact">
       <div className="lg:min-h-screen py-20 xl:py-40">
         <h2 className="text-4xl font-semibold">Write an Email</h2>
         <p className="mt-4">
