@@ -1,6 +1,6 @@
 {
-  "name": "zeeshan",
-  "version": "0.1.0",
+  "name": "zeeshanasif",
+  "version": "3.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
