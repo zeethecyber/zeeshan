@@ -72,7 +72,13 @@ export default function Modal() {
                 <h2 className="text-4xl text-primary font-semibold">
                   {modalData?.title}
                 </h2>
-                <p className="mt-8">{modalData?.description}</p>
+                {/* <p className="mt-8">{modalData?.description}</p> */}
+                <p
+                  className="mt-8"
+                  dangerouslySetInnerHTML={{
+                    __html: modalData?.description || "",
+                  }}
+                />
               </div>
               <div>
                 <ul className="mt-4 flex flex-wrap items-center gap-4 text-sm">

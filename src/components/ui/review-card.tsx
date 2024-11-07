@@ -37,7 +37,7 @@ export default function ReviewCard({
           </p>
         </div>
       </div>
-      <p className="mt-2">{review}</p>
+      <p className="mt-2 line-clamp-4">{review}</p>
     </div>
   );
 }

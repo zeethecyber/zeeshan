@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Outfit } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalytics />
       <body
         className={`${spaceGrotesk.variable} ${outfit.variable} antialiased hide-scrollbar`}
       >
