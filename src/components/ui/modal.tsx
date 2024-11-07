@@ -53,16 +53,13 @@ export default function Modal() {
   return (
     <div
       id="modal-wrapper"
-      className="hidden opacity-0 fixed inset-0 items-center justify-center p-8 text-white z-50"
+      className="hidden opacity-0 fixed inset-0 items-center justify-center p-4 md:p-8 text-white z-50"
     >
       <div
         id="modal-container"
-        className="w-full max-w-6xl relative translate-y-40 opacity-0"
+        className="w-full max-w-6xl relative translate-y-40 opacity-0 max-h-full overflow-auto bg-black/20 border border-white/35 rounded-xl"
       >
-        <div
-          id="modal-innerContainer"
-          className="bg-white/10 border border-white/35 rounded-xl p-6"
-        >
+        <div id="modal-innerContainer" className="p-6">
           <button className="absolute top-1.5 right-1.5" onClick={closeModal}>
             <X />
           </button>

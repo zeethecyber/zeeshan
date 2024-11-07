@@ -20,12 +20,14 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const openModal = (data: (typeof PROJECTS)[0]) => {
     setModalData(data);
     setModalOpen(true);
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     // Delay closing the modal to allow the animation to finish
     setTimeout(() => {
       setModalData(null);
+      document.body.style.overflow = "auto";
     }, 500);
     setModalOpen(false);
   };
