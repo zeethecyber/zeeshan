@@ -4,19 +4,23 @@ type Props = {
 
 const SECTIONS = [
   {
-    id: "section-2",
+    id: "section-about",
     text: "About",
   },
   {
-    id: "section-3",
+    id: "section-experience",
     text: "Experience",
   },
   {
-    id: "section-4",
+    id: "section-projects",
     text: "Projects",
   },
   {
-    id: "section-5",
+    id: "section-reviews",
+    text: "Reviews",
+  },
+  {
+    id: "section-contact",
     text: "Contact",
   },
 ];
@@ -25,7 +29,9 @@ export default function SidePanel({ activeSection }: Props) {
   const scrollTo = (sectionId: string) => {
     const el = document.getElementById(sectionId);
     if (!el) return;
-    const space = sectionId === "section-5" ? 0 : 100;
+    const space = ["section-contact", "section-about"].includes(sectionId)
+      ? 0
+      : 100;
     window.scrollTo({
       top: el.offsetTop - space,
       behavior: "smooth",

@@ -5,7 +5,7 @@ export default function ReviewsSection() {
     <section id="section-reviews" className="mt-40 grid gap-6">
       <ReviewCard
         client="Kamran S."
-        position="CEO KShekh"
+        position="CEO - KShekh"
         location="India"
         review="Zeeshan has been a great asset to our team. He is a talented developer who is always willing to go the extra mile to get the job done. I highly recommend him to anyone looking for a skilled and reliable developer."
         image="/images/kamran.png"
@@ -19,9 +19,9 @@ export default function ReviewsSection() {
       />
       <ReviewCard
         client="Stefano V."
-        position="CTO - Volso Tech"
+        position="Freelancer"
         location="Italy"
-        review="Zeeshan did an amazing job and helped me in my project. He is not only expert in frontend but also has a good knowledge of backend too. He is very professional and has a lot of experience in web development. I highly recommend him."
+        review="Working with you has been really satisfying, trying the Fiverr Platform for the first time, I found in Zeeshan, the professional I was looking for, he helped me develop my project and did it both in the best times and ways! I will continue to work on new projects with Zeeshan."
         image="/images/stefano.png"
       />
     </section>

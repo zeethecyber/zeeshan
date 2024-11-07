@@ -17,7 +17,7 @@ export const SECTIONS = [
       heading: "Zeeshan Asif",
       subheading: "Senior Software Engineer",
       helperText:
-        "I build web applications using modern technologies and make my clients happy.",
+        "I build web applications using modern technologies, and make my clients happy.",
     },
     activeSection: "section-experience",
     previousSection: "section-about",

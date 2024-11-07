@@ -47,7 +47,7 @@ export default function DesktopVersion() {
         .to(".helper-text", {
           text: {
             value:
-              "I build web applications using modern technologies and make my clients happy.",
+              "I build web applications using modern technologies, and make my clients happy.",
           },
           opacity: 1,
           duration: 1.5,
