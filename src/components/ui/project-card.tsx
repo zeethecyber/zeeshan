@@ -43,7 +43,7 @@ export default function ProjectCard({
             Read More
           </button>
         </div>
-        <ul className="mt-4 flex items-center gap-4 text-sm">
+        <ul className="mt-4 flex flex-wrap items-center gap-3 text-sm">
           {technologies?.map((tech, index) => (
             <li
               key={index}
