@@ -1,6 +1,6 @@
 {
-  "name": "zeeshan",
-  "version": "0.1.0",
+  "name": "zeeshanasif",
+  "version": "3.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,12 +10,16 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "gsap": "^3.12.5",
+    "lucide-react": "^0.454.0",
     "next": "14.2.15",
     "nodemailer": "^6.9.15",
     "react": "^18",
     "react-dom": "^18",
-    "sonner": "^1.5.0"
+    "sonner": "^1.5.0",
+    "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

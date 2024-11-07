@@ -5,13 +5,14 @@ import { ScrollTrigger, TextPlugin } from "gsap/all";
 import { useRef, useState } from "react";
 
 import { SECTIONS } from "@/data/home-page";
-import Section1 from "./section-1";
-import Section2 from "./section-2";
-import Section3 from "./section-3";
-import Section4 from "./section-4";
-import Section5 from "./section-5";
+import IntroSection from "./intro";
+import AboutSection from "./about";
+import ExperienceSection from "./experience";
+import ProjectSection from "./projects";
+import ContactSection from "./contact";
 import Footer from "@/components/layout/footer";
 import SidePanel from "@/components/layout/side-panel";
+import ReviewsSection from "./reviews";
 
 export default function DesktopVersion() {
   gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
@@ -46,7 +47,7 @@ export default function DesktopVersion() {
         .to(".helper-text", {
           text: {
             value:
-              "I build web applications using modern technologies and make my clients happy.",
+              "I build web applications using modern technologies, and make my clients happy.",
           },
           opacity: 1,
           duration: 1.5,
@@ -130,20 +131,20 @@ export default function DesktopVersion() {
       );
 
       // Background color change for section-6
-      gsap.fromTo(
-        "body",
-        {},
-        {
-          scrollTrigger: {
-            trigger: "#section-6",
-            start: "top center",
-            end: "+=100px",
-            scrub: 1,
-          },
-          backgroundColor: "#011627",
-          color: "#FEF9F2",
-        }
-      );
+      // gsap.fromTo(
+      //   "body",
+      //   {},
+      //   {
+      //     scrollTrigger: {
+      //       trigger: "#section-6",
+      //       start: "top center",
+      //       end: "+=100px",
+      //       scrub: 1,
+      //     },
+      //     backgroundColor: "#CBFB45",
+      //     color: "#000",
+      //   }
+      // );
 
       // Experience card animations
       gsap.to(".experience-card", {
@@ -171,7 +172,7 @@ export default function DesktopVersion() {
         });
       });
     },
-    { scope: container.current || undefined }
+    { scope: container.current || undefined, dependencies: [] }
   );
 
   return (
@@ -181,11 +182,12 @@ export default function DesktopVersion() {
           <SidePanel activeSection={activeSection} />
         </div>
         <div id="right-container">
-          <Section1 />
-          <Section2 />
-          <Section3 />
-          <Section4 />
-          <Section5 />
+          <IntroSection />
+          <AboutSection />
+          <ExperienceSection />
+          <ProjectSection />
+          <ReviewsSection />
+          <ContactSection />
         </div>
       </div>
       <Footer />

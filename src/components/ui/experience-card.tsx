@@ -12,8 +12,8 @@ export default function ExperienceCard({
   description,
 }: Props) {
   return (
-    <div className="border-y border-white p-4 opacity-0 translate-y-8 experience-card">
-      <h3 className="text-lg font-semibold">{title}</h3>
+    <div className="rounded-lg border border-white/35 bg-white/10 backdrop-blur-md p-4 opacity-0 translate-y-8 experience-card">
+      <h3 className="text-lg font-semibold text-primary">{title}</h3>
       <p className="font-medium">
         {company} | {date}
       </p>
