@@ -11,6 +11,12 @@ IMPORTANT: It took a lot of my time and effort to create this site. You are very
 - Built with Next.js for fast and efficient SSR
 - Easily customizable to fit your personal style
 
+## Packages
+
+- GSAP
+- Nodemailer
+- TailwindCss
+
 ## Getting Started
 
 ### Clone the Repository
