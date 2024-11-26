@@ -42,8 +42,9 @@ export const SECTIONS = [
     trigger: "#section-reviews",
     startText: {
       heading: "Reviews",
-      subheading: "What Clients Say",
-      helperText: "Here are some testimonials from my clients.",
+      subheading: "What People Say",
+      helperText:
+        "Here are some testimonials from people that I've worked with.",
     },
     leaveBackText: {
       heading: "Projects",
@@ -62,8 +63,9 @@ export const SECTIONS = [
     },
     leaveBackText: {
       heading: "Reviews",
-      subheading: "What Clients Say",
-      helperText: "Here are some testimonials from my clients.",
+      subheading: "What People Say",
+      helperText:
+        "Here are some testimonials from people that I've worked with.",
     },
     activeSection: "section-contact",
     previousSection: "section-reviews",

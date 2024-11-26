@@ -67,11 +67,11 @@ export default function SidePanel({ activeSection }: Props) {
       </div>
       <div>
         <ul className="flex items-center gap-4 md:gap-8 text-xs md:text-base">
-          <li className="social-link opacity-0 hover:-translate-y-1 duration-150">
+          {/* <li className="social-link opacity-0 hover:-translate-y-1 duration-150">
             <a href="https://www.fiverr.com/zeeshan_016" target="_blank">
               Fiverr
             </a>
-          </li>
+          </li> */}
           <li className="social-link opacity-0 hover:-translate-y-1 duration-150">
             <a
               href="https://www.upwork.com/freelancers/~016bde0da63ae42b8d"
